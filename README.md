@@ -1,2 +1,2 @@
 # philippczernitzki.me
-My personal website/blog
+Personal website/blog

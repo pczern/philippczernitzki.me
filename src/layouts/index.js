@@ -1,4 +1,5 @@
 
+import '../css/index.css';
 import React from 'react'
 import Link from 'gatsby-link'
 import 'font-awesome/css/font-awesome.min.css';
@@ -11,7 +12,6 @@ import Footer from '../containers/Footer';
 
 
 
-import '../css/index.css';
 const theme = {
   main: 'mediumseagreen',
   background: "rgb(0, 0, 0)", //"rgb(0, 234, 255)",
