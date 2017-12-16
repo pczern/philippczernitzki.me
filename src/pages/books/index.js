@@ -19,7 +19,7 @@ export default (props) => (
   <div>
     {books.map((book, index) => (
       <BoxedContainer>
-
+        
         <BookBox key={index} src={book.src}>{book.content}</BookBox>
 
       </BoxedContainer>

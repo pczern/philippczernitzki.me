@@ -4,7 +4,6 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
 import Bio from '../components/Bio'
-import { rhythm } from '../utils/typography'
 import styled from 'styled-components';
 
 import Banner from '../components/Banner';
@@ -12,7 +11,7 @@ import BannerImage from '../images/code.png';
 
 import IconBox from '../components/SmallIconBox';
 
-console.log(BannerImage);
+
 
 import { rgba } from 'polished'
 import { withTheme } from 'styled-components'

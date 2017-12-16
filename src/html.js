@@ -30,8 +30,9 @@ module.exports = class HTML extends React.Component {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
 
-          {css}
+
           {this.props.headComponents}
+          {css}
 
         </head>
         <body {...this.props.bodyAttributes}>

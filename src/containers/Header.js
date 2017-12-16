@@ -88,10 +88,10 @@ export default (props) => (
     </div>
     <Navigation>
       <LinkList>
-        <LinkItem>Blog</LinkItem>
-        <LinkItem>Leistungen</LinkItem>
-        <LinkItem>Webinar</LinkItem>
-        <LinkItem>Bücher</LinkItem>
+        <LinkItem to="/blog">Blog</LinkItem>
+        <LinkItem to="/leistungen">Leistungen</LinkItem>
+        <LinkItem to="/webinar">Webinar</LinkItem>
+        <LinkItem to="/buecher">Bücher</LinkItem>
       </LinkList>
     </Navigation>
   </Header>

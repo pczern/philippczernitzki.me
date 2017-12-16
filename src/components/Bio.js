@@ -1,10 +1,6 @@
 import React from 'react'
 
-// Import typefaces
-import 'typeface-montserrat'
-import 'typeface-merriweather'
 
-import profilePic from './profile-pic.jpg'
 
 
 class Bio extends React.Component {
@@ -13,12 +9,11 @@ class Bio extends React.Component {
       <div
         style={{
           display: 'flex',
-          
+
         }}
       >
         <img
-          src={profilePic}
-          alt={`Kyle Mathews`}
+
           style={{
 
             marginBottom: 0,

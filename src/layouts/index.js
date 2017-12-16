@@ -8,7 +8,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import LogoMe from '../images/code.png';
 import Header from '../containers/Header';
 import Footer from '../containers/Footer';
-
+import PropTypes from 'prop-types';
 
 
 
@@ -30,9 +30,16 @@ const Container = styled.div`
 const Content = styled.div`
 
 `
+Content.propTypes = {
+  children: PropTypes.any
+}
 
 
 class Template extends React.Component {
+  propTypes: {
+    children: PropTypes.any
+  }
+
   render() {
     const { location, children } = this.props
     let header
@@ -62,5 +69,7 @@ class Template extends React.Component {
     )
   }
 }
+
+
 
 export default Template
