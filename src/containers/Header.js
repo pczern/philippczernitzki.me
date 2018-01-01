@@ -59,7 +59,7 @@ const Header = styled.header`
   margin: 0 auto;
   display: flex;
   align-items: center;
-  padding: 2.5em 0em;
+  padding: 2.8em 0em;
 
   font-family: Muli, sans-serif;
 `
@@ -82,17 +82,18 @@ const LinkItem = (props) => (
 
 export default (props) => (
   <Header>
-    <div>
+    <GatsbyLink to="/">
       <Title>Philipp Czernitzki</Title>
       <Subtitle>Web & App Engineer aus Deutschland</Subtitle>
-    </div>
+    </GatsbyLink>
     <Navigation>
       <LinkList>
         <LinkItem to="/blog">Blog</LinkItem>
         <LinkItem to="/leistungen">Leistungen</LinkItem>
         <LinkItem to="/webinar">Webinar</LinkItem>
-        <LinkItem to="/buecher">Bücher</LinkItem>
+        <LinkItem to="/books">Bücher</LinkItem>
       </LinkList>
     </Navigation>
   </Header>
+
 )

@@ -1,5 +1,6 @@
 import React from "react"
 
+import './css/index.css';
 let stylesStr
 if (process.env.NODE_ENV === `production`) {
   try {
@@ -30,9 +31,9 @@ module.exports = class HTML extends React.Component {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
 
-
-          {this.props.headComponents}
           {css}
+          {this.props.headComponents}
+
 
         </head>
         <body {...this.props.bodyAttributes}>
@@ -43,7 +44,10 @@ module.exports = class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
+          <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbXsR79I14p1ZDwq6YWv5XYd80G7OCOVs&callback=initMap"></script>
         </body>
+
+
       </html>
     )
   }

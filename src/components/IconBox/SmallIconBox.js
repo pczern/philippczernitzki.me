@@ -2,7 +2,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import Icon from './Icon';
+import Icon from '../Icon';
 
 
 const Wrapper = styled.figure`
@@ -20,6 +20,7 @@ const StyledIcon = styled(Icon)`
 const Caption = styled.figcaption`
 line-height: 1.8;
 font-size: 1.15em;
+font-weight: 300;
 color: ${props => props.theme.secondaryText};
 `
 

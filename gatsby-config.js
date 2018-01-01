@@ -7,6 +7,7 @@ module.exports = {
   },
   pathPrefix: '/gatsby-starter-blog',
   plugins: [
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -44,22 +45,25 @@ module.exports = {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
           `roboto\:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i`,
           `raleway`,
+          `hind\:300,400,500,600,700`,
           `muli\:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i`,
           `limelight`,
+          `montserrat\:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i`,
           `source sans pro\:300,400,400i,700` // you can also specify font weights and styles
         ]
       }
     },
     `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`
+
     // {
     //   resolve: 'gatsby-plugin-typography',
     //   options: {

@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const Promise = require('bluebird')
 const path = require('path')
+
 const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
@@ -49,6 +50,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
+    console.log(value);
     createNodeField({
       name: `slug`,
       node,
@@ -56,3 +58,24 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     })
   }
 }
+
+// Implement the Gatsby API “onCreatePage”. This is
+// called after every page is created.
+exports.onCreatePage = async ({ page, boundActionCreators }) => {
+  const { createPage } = boundActionCreators;
+
+  return new Promise((resolve, reject) => {
+    if (page.path.match(/^\//)) {
+      // It's assumed that `landingPage.js` exists in the `/layouts/` directory
+      page.layout = "index";
+
+      // Update the page.
+      createPage(page);
+    }else{
+      page.layout = "blog"
+      createPage(page);
+    }
+
+    resolve();
+  });
+};

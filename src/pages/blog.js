@@ -3,9 +3,11 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
+
 import Bio from '../components/Bio'
 import Article from '../components/Article';
-import BoxedContainer from '../components/BoxedContainer';
+import {BoxedContainer} from '../components/Container';
+
 class BlogIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')

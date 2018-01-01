@@ -3,13 +3,15 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-const Wrapper = styled.div`;
+const Wrapper = styled.div`
+  width: 100%;
   padding: ${props => props.padding} 0px;
+  background-color: ${props => props.backgroundColor};
 `
 
 export default (props) => (
 
-  <Wrapper padding={props.padding}>
+  <Wrapper padding={props.padding} {...props}>
     {props.children}
   </Wrapper>
 
