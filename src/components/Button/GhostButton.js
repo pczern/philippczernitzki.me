@@ -16,6 +16,10 @@ const ActionButton = styled.button`
   color: #F6F6F6;
   margin-left: 1px;
   cursor: pointer;
+  &:hover{
+    background-color: #F6F6F6EE;
+    color: ${props => props.color ? props.color : props.theme.primary}
+  }
 `
 
 export default ActionButton;

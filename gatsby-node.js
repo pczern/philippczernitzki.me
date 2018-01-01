@@ -61,7 +61,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
 
 // Implement the Gatsby API “onCreatePage”. This is
 // called after every page is created.
-exports.onCreatePage = async ({ page, boundActionCreators }) => {
+exports.onCreatePage = ({ page, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
 
   return new Promise((resolve, reject) => {

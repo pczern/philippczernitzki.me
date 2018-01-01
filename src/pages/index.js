@@ -25,7 +25,7 @@ import Map from '../components/Map';
 console.log('x');
 
 import Project from '../components/Project';
-
+import {GhostButton} from '../components/Button';
 const Container = styled.div`
 
 `
@@ -281,7 +281,7 @@ class Index extends React.Component {
             <ActionHeadline>Software Engineer</ActionHeadline>
             <ActionSubheadline>React & Android Expert, 7 Years Experience, 2018</ActionSubheadline>
             <div>
-              <ActionButton>Schreib mir</ActionButton>
+              <GhostButton>Schreib mir</GhostButton>
               <ActionButton2>React Webinar</ActionButton2>
             </div>
           </InnerBanner>
