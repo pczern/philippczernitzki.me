@@ -88,10 +88,9 @@ export default (props) => (
     </GatsbyLink>
     <Navigation>
       <LinkList>
-        <LinkItem to="/blog">Blog</LinkItem>
-        <LinkItem to="/leistungen">Leistungen</LinkItem>
-        <LinkItem to="/webinar">Webinar</LinkItem>
-        <LinkItem to="/books">Bücher</LinkItem>
+        <LinkItem to="/blog">Blog / Meinungen</LinkItem>
+        <LinkItem to="/training">Training</LinkItem>
+        {/* <LinkItem to="/">Bücher</LinkItem> */}
       </LinkList>
     </Navigation>
   </Header>

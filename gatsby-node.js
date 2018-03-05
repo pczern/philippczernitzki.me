@@ -9,6 +9,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
   return new Promise((resolve, reject) => {
     const blogPost = path.resolve('./src/templates/blog-post.js')
+
     resolve(
       graphql(
         `
@@ -16,13 +17,33 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             allMarkdownRemark(limit: 1000) {
               edges {
                 node {
+                  frontmatter{
+                    published
+                  }
                   fields {
                     slug
                   }
                 }
               }
             }
+            allJsFrontmatter{
+              edges {
+                node {
+                  data {
+                    path
+                    title
+                    date(formatString: "DD MMMM, YYYY")
+                    excerpt
+                    published
+                  }
+                }
+              }
+            }
           }
+
+
+
+
         `
       ).then(result => {
         if (result.errors) {
@@ -32,11 +53,24 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
         // Create blog posts pages.
         _.each(result.data.allMarkdownRemark.edges, edge => {
+          console.log(edge.node);
+          if(edge.node.frontmatter.published)
           createPage({
             path: edge.node.fields.slug,
             component: blogPost,
             context: {
               slug: edge.node.fields.slug,
+            },
+          })
+        })
+        _.each(result.data.allJsFrontmatter.edges, edge => {
+          console.log(edge.node);
+          if(edge.node.data.published)
+          createPage({
+            path: edge.node.data.path,
+            component: blogPost,
+            context: {
+              slug: edge.node.data.path,
             },
           })
         })
@@ -72,7 +106,7 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
       // Update the page.
       createPage(page);
     }else{
-      page.layout = "blog"
+      page.layout = "index"
       createPage(page);
     }
 

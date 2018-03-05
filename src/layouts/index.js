@@ -17,6 +17,7 @@ const theme = {
   main: 'mediumseagreen',
   background: "rgb(0, 0, 0)", //"rgb(0, 234, 255)",
   maxWidth: "1100px",
+  blogWidth: "800px",
   primary: "#0079B1",
   primaryText: "#888",
   primaryHeadline: "#222",
@@ -26,7 +27,9 @@ const theme = {
 
 }
 const Container = styled.div`
-
+ min-height: 100%;
+ display: flex;
+ flex-direction: column;
 `;
 
 // const TemplateWrapper = ({ children }) => (
@@ -103,7 +106,6 @@ class Template extends React.Component {
 
 
     return (
-      <div>
         <ThemeProvider theme={theme}>
           <Container>
             <Header logo={LogoMe}/>
@@ -113,7 +115,6 @@ class Template extends React.Component {
             <Footer />
           </Container>
         </ThemeProvider>
-      </div>
     )
   }
 }

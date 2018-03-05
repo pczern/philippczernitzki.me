@@ -14,8 +14,12 @@ html {
 
 }
 html {
+  height: 100%;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+}
+#___gatsby{
+  height: 100%;
 }
 body {
     margin: 0;
@@ -25,6 +29,9 @@ body {
       font-size: 16px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+
+    height: 100%;
+
 }
 h1,
 h2,
@@ -39,8 +46,7 @@ img {
     margin: 0;
     padding: 0;
 }
-main,
-li {
+main{
     display: block;
 }
 h1,
@@ -95,18 +101,30 @@ img {
 .article-styles h1{
   font-size: 2.2em;
   color: #222;
-  margin-top: 0.5em;
+
   margin-bottom: 0.5em;
     font-weight: 400;
 }
 .article-styles h2{
   color: #333;
-  font-size: 1.5em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-weight: 300;
+  font-size: 1.35em;
+
+  margin-bottom: 0.5em;
+  font-weight: 400;
 }
 .article-styles h3{
   font-size: 1.15em;
   font-weight: bold;
 }
+.article-styles section{
+
+  padding-bottom: 1em;
+}
+.main-content{
+  padding-bottom: 4em;
+ flex: 1;
+}
+/* .main-content li{
+  line-height: 1.7;
+  margin-left: 1.3em;
+} */

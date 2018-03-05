@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter Blog',
+    title: 'Philipp Czernitzki',
     author: 'Philipp Czernitzki',
-    description: 'A starter blog demonstrating what Gatsby can do.',
-    siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
+    description: 'Software Engineer, Entrepreneur, Visionär',
+    siteUrl: 'philippczernitzki.me',
   },
   pathPrefix: '/gatsby-starter-blog',
   plugins: [
@@ -11,7 +11,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
+        path: `${__dirname}/src/pages/posts`,
         name: 'pages',
       },
     },
@@ -24,6 +24,13 @@ module.exports = {
             options: {
               maxWidth: 590,
             },
+          },
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+              rel: "nofollow"
+            }
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
@@ -62,7 +69,8 @@ module.exports = {
     },
     `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-javascript-static-exports`
 
     // {
     //   resolve: 'gatsby-plugin-typography',

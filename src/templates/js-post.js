@@ -1,6 +1,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
+import {BlogContainer, BoxedContainer} from '../components/Container';
+import Post from '../components/Post';
+
 
 
 class BlogPostTemplate extends React.Component {
@@ -9,18 +12,14 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
     return (
-      <div>
+      <BlogContainer>
         <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-        <h1>{post.frontmatter.title}</h1>
-        <p>
-          {post.frontmatter.date}
-        </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-
-        />
-
-      </div>
+        <Post>
+          <h1>{post.frontmatter.title}</h1>
+          <time>{post.frontmatter.date}</time>
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        </Post>
+      </BlogContainer>
     )
   }
 }
@@ -28,19 +27,20 @@ class BlogPostTemplate extends React.Component {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query BlogPostBySlug1($slug: String!) {
     site {
       siteMetadata {
         title
         author
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      html
-      frontmatter {
+    jsFrontmatter(data: { path: { eq: $slug } }) {
+      data {
+        path
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD MMMM, YYYY")
+        excerpt
+        published
       }
     }
   }
