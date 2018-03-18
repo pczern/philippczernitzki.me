@@ -7,14 +7,21 @@ module.exports = {
   },
   pathPrefix: '/gatsby-starter-blog',
   plugins: [
-
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages/posts`,
+        path: `${__dirname}/src/pages/blog/markdown-posts`,
         name: 'pages',
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages/blog/`,
+        name: 'pages2',
+      },
+    },
+
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -26,11 +33,11 @@ module.exports = {
             },
           },
           {
-            resolve: "gatsby-remark-external-links",
+            resolve: 'gatsby-remark-external-links',
             options: {
-              target: "_blank",
-              rel: "nofollow"
-            }
+              target: '_blank',
+              rel: 'nofollow',
+            },
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
@@ -49,7 +56,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        // trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
     `gatsby-plugin-styled-components`,
@@ -63,15 +70,14 @@ module.exports = {
           `muli\:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i`,
           `limelight`,
           `montserrat\:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i`,
-          `source sans pro\:300,400,400i,700` // you can also specify font weights and styles
-        ]
-      }
+          `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
+        ],
+      },
     },
+    `gatsby-transformer-javascript-frontmatter`,
     `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-javascript-static-exports`
-
     // {
     //   resolve: 'gatsby-plugin-typography',
     //   options: {

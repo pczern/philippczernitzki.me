@@ -1,25 +1,21 @@
-
-import React from 'react';
-import styled from 'styled-components';
-
-
+import styled from 'styled-components'
 
 const ActionButton = styled.button`
   color: #222;
-  border: solid 1px #F6F6F6EE;
+  border: solid 1px #f6f6f6ee;
   border-radius: 5px;
   padding: 0.75em 2.3em;
   font-weight: 300;
   letter-spacing: 1px;
   display: inline-block;
   margin-bottom: 5em;
-  color: #F6F6F6;
+  color: #f6f6f6;
   margin-left: 1px;
   cursor: pointer;
-  &:hover{
-    background-color: #F6F6F6EE;
-    color: ${props => props.color ? props.color : props.theme.primary}
+  &:hover {
+    background-color: #f6f6f6ee;
+    color: ${props => (props.color ? props.color : props.theme.primary)};
   }
 `
 
-export default ActionButton;
+export default ActionButton
