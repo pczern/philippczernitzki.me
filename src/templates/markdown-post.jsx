@@ -1,7 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
-import { BlogContainer } from '../components/Container'
 import Post from '../components/Post'
 
 function MarkdownPostTemplate(props) {
@@ -9,14 +8,14 @@ function MarkdownPostTemplate(props) {
   const postFrontmatter = post.frontmatter
   const siteTitle = get(props, 'data.site.siteMetadata.title')
   return (
-    <BlogContainer>
+    <div>
       <Helmet title={`${postFrontmatter.title} | ${siteTitle}`} />
-      <Post>
+      <Post padding="0" center>
         <h1>{postFrontmatter.title}</h1>
         <time>{postFrontmatter.date}</time>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </Post>
-    </BlogContainer>
+    </div>
   )
 }
 

@@ -1,6 +1,5 @@
-import BoxedContainer from './BoxedContainer'
 import FullContainer from './FullContainer'
-import Row from './Row'
 import BlogContainer from './BlogContainer'
+import BoxedContainer from './BoxedContainer'
 
-export { BoxedContainer, FullContainer, Row, BlogContainer }
+export { FullContainer, BlogContainer, BoxedContainer }

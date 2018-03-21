@@ -1,0 +1,44 @@
+@value banner-red, banner-bue, banner-green, banner-default from "../../css/colors.scss";
+
+$bannerHeight: 440px;
+
+.banner {
+  width: 100%;
+  height: $bannerHeight;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+}
+
+.banner__body {
+  padding: 0 5%;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+
+  h1 {
+    font-size: 3em;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    font-weight: 300;
+  }
+
+  &--green {
+    background-color: banner-green;
+  }
+
+  &--red {
+    background-color: banner-red;
+  }
+
+  &--blue {
+    background-color: banner-blue;
+  }
+
+  &--default-color {
+    background-color: banner-default;
+  }
+}

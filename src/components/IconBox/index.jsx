@@ -1,3 +1,3 @@
-import SmallIconBox from './SmallIconBox'
+import IconBox from './IconBox'
 
-export default SmallIconBox
+export default IconBox

@@ -1,12 +1,31 @@
-import styled from 'styled-components'
+import React from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
+import css from './index.scss'
 
-const BoxedContainer = styled.div`
-  max-width: ${props =>
-    props.maxWidth ? props.maxWidth : props.theme.maxWidth};
-  margin: 0 auto;
-  padding: ${props => (props.padding ? props.padding : '0')};
-  background-color: ${props => props.backgroundColor};
-  text-align: ${props => (props.align ? props.align : 'left')};
-`
+const boxedContainerClass = css['container--boxed']
+
+function BoxedContainer(props) {
+  return (
+    <div
+      className={classNames(boxedContainerClass, props.className)}
+      style={{
+        padding: props.padding,
+      }}
+    >
+      {props.children}
+    </div>
+  )
+}
+
+BoxedContainer.propTypes = {
+  className: PropTypes.string,
+  padding: PropTypes.string,
+  children: PropTypes.node.isRequired,
+}
+BoxedContainer.defaultProps = {
+  className: null,
+  padding: null,
+}
 
 export default BoxedContainer

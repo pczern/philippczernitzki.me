@@ -1,0 +1,19 @@
+@value width as _width from "../../css/dimens.scss";
+
+.container--full {
+  width: 100%;
+}
+
+.container--boxed {
+  max-width: _width;
+  margin: 0 auto;
+}
+
+.container--blog {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container--padding {
+  padding: 0 5%;
+}

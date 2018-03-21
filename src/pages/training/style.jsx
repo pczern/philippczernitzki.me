@@ -1,15 +1,10 @@
 import styled from 'styled-components'
-import Banner, {
-  InnerContainer,
-  Headline as BHeadline,
-  Subheadline as BSubheadline,
-} from '../../components/Banner'
 
-export const BannerInner = InnerContainer.extend``
-
-export const BannerHeadline = BHeadline.extend``
-export const BannerSubheadline = BSubheadline.extend``
-export const BannerContainer = Banner
+export const BannerInner = styled.div`
+  max-width: ${props => props.theme.maxWidth};
+  width: 100%;
+  align-items: left;
+`
 
 export const Headline = styled.h2`
   font-size: 1.4em;

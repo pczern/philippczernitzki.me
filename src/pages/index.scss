@@ -1,0 +1,100 @@
+@value primary as _primary, primaryHeadline from "../css/colors.scss";
+
+@mixin headline {
+  font-size: 1.4em;
+  color: primaryHeadline;
+  margin-bottom: 2em;
+  text-align: center;
+  font-family: Hind, sans-serif;
+}
+
+.topContact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topContact__contactButton {
+  padding: 0.9em 3.75%;
+  font-size: 0.98em;
+  border: none;
+  cursor: pointer;
+  margin: 0 2%;
+  border-radius: 0.2em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.topContact__emailButton {
+  line-height: 1.8;
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: 1px;
+
+  i {
+    font-size: 1.3em;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+}
+
+.aboutText__textBox {
+  &:nth-child(odd) {
+    padding: 0 2.5% 0 4%;
+  }
+
+  &:nth-child(even) {
+    padding: 0 4% 0 2.5%;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    color: #616161;
+    font-weight: 300;
+  }
+
+  p {
+    color: #888;
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 1em;
+  }
+}
+
+.aboutText__headline {
+  @include headline;
+}
+
+.aboutText {
+  background-color: #f9f9f9;
+}
+
+.project {
+  height: 200px;
+  width: 100%;
+  background-color: #aaa;
+  margin: 0 2.5%;
+}
+
+.topBanner {
+  h1 {
+    margin-bottom: 0.1em;
+    font-weight: 600;
+  }
+
+  h2 {
+    margin-bottom: 1.4em;
+  }
+
+  button:nth-child(2) {
+    margin-left: 2em;
+  }
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}

@@ -1,33 +1,27 @@
 import React from 'react'
 import { withTheme } from 'styled-components'
-
-import { BoxedContainer, FullContainer } from '../../components/Container'
+import { FullContainer } from '../../components/Container'
+import Post from '../../components/Post'
 import ReactStart from './ReactStart.png'
+import Banner from '../../components/Banner'
+import { BannerInner } from './style'
 
-import {
-  BannerContainer,
-  BannerInner,
-  BannerHeadline,
-  BannerSubheadline,
-  Headline,
-} from './style'
-
-const Training = () => (
+const Training = props => (
   <FullContainer>
-    <BannerContainer
+    <Banner
       height={300}
-      color="rgba(212, 0, 0, 0.63)"
+      red
+      justifyContent="center"
+      alignItems="center"
       src={ReactStart}
     >
       <BannerInner>
-        <div>
-          <BannerHeadline>Lerne React von einem Experten</BannerHeadline>
-          <BannerSubheadline>Webanwendungen der Zukunft</BannerSubheadline>
-        </div>
+        <h1>Lerne React</h1>
+        <h2>Webanwendungen der Zukunft</h2>
       </BannerInner>
-    </BannerContainer>
-    <BoxedContainer>
-      <Headline>Video Tutorial</Headline>
+    </Banner>
+    <Post center>
+      <h1>Video Tutorial</h1>
       <iframe
         title="Youtube"
         width="560"
@@ -36,7 +30,7 @@ const Training = () => (
         frameBorder="0"
         allowFullScreen
       />
-    </BoxedContainer>
+    </Post>
   </FullContainer>
 )
 

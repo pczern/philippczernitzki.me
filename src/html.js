@@ -2,7 +2,6 @@
 
 import React from 'react'
 
-import './css/index.css'
 
 let stylesStr
 if (process.env.NODE_ENV === `production`) {

@@ -104,6 +104,7 @@ export default class Map extends React.Component {
     const map = new google.maps.Map(mapElement, mapOptions)
 
     // Let's also add a marker while we're at it
+    // eslint-disable-next-line
     const marker = new google.maps.Marker({
       position,
       map,

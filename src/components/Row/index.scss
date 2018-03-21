@@ -1,0 +1,28 @@
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.row--1 {
+  & > * {
+    width: 100%;
+  }
+}
+
+.row--2 {
+  & > * {
+    width: 50%;
+  }
+}
+
+.row--3 {
+  & > * {
+    width: 33.333333%;
+  }
+}
+
+.row--4 {
+  & > * {
+    width: 25%;
+  }
+}

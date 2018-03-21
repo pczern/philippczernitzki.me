@@ -1,0 +1,17 @@
+.iconBox {
+  text-align: center;
+}
+
+.iconBox__icon {
+  font-size: 2em;
+  color: #121212;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+.iconBox__figcaption {
+  line-height: 1.8;
+  font-size: 1.15em;
+  font-weight: 300;
+  // color: ${props => props.theme.secondaryText};
+}

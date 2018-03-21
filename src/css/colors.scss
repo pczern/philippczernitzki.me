@@ -1,0 +1,16 @@
+// stylelint-disable property-no-unknown, selector-pseudo-class-no-unknown
+// we need to use :export because @value has an error with colors
+// postcss calc needs to run after css-loader but this is just not the case
+:export {
+  primary: #0079b1;
+  banner-red: #f00;
+  banner-green: #0f0;
+  banner-blue: #00f;
+  banner-default: rgba(0, 121, 177, 0.8);
+  primary-text: #888;
+  primary-headline: #222;
+  secondary-headline: #616161;
+  secondary-text: #666;
+}
+
+// alternative good colors: #08607b

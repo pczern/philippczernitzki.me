@@ -4,9 +4,9 @@ import styled, { ThemeProvider } from 'styled-components'
 import { rgba } from 'polished'
 
 import LogoMe from '../images/code.png'
-import Header from '../containers/Header'
-import Footer from '../containers/Footer'
-import '../css/index.css'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import '../css/index.scss'
 
 const theme = {
   main: 'mediumseagreen',

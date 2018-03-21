@@ -1,0 +1,35 @@
+@value primary from "../../css/colors.scss";
+
+@mixin button() {
+  border: none;
+  border-radius: 5px;
+  padding: 0.75em 2.3em;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.actionButton {
+  @include button;
+
+  background-color: primary;
+  color: #fff;
+}
+
+.actionButton--inverted {
+  background-color: #fff;
+  color: primary;
+}
+
+.ghostButton {
+  @include button;
+
+  border: solid 1px #f6f6f6;
+
+  &:hover {
+    background-color: #f6f6f6;
+    color: primary;
+    font-weight: 400;
+  }
+}
