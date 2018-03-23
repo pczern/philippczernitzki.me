@@ -1,8 +1,11 @@
 // stylelint-disable property-no-unknown, selector-pseudo-class-no-unknown
 // we need to use :export because @value has an error with colors
 // postcss calc needs to run after css-loader but this is just not the case
+
+//@value primary #0079b1;
+//
 :export {
-  primary: #0079b1;
+  primary: #fff;
   banner-red: #f00;
   banner-green: #0f0;
   banner-blue: #00f;
@@ -14,3 +17,5 @@
 }
 
 // alternative good colors: #08607b
+
+$primary: #000;

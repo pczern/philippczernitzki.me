@@ -10,7 +10,6 @@ import Map, { MapBox } from '../components/Map'
 import { GhostButton, ActionButton } from '../components/Button'
 import Banner from '../components/Banner'
 import Project from '../components/Project'
-import TextBox from '../components/TextBox'
 import Row from '../components/Row'
 import css from './index.scss'
 

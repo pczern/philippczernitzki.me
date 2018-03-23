@@ -1,6 +1,7 @@
 :global {
   $color: rgba(0, 0, 0, 0);
   $width: 1000px !global;
+  $primary: #0079b1 !global;
 
   html {
     height: 100%;
@@ -27,6 +28,11 @@
 
   #___gatsby {
     height: 100%;
+
+    .__page {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   body {

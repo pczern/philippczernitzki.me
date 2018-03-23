@@ -46,7 +46,7 @@ class BlogIndex extends React.Component {
       return new PostModel(title, isPublished, date, `blog${slug}`, excerpt)
     })
 
-    const posts = Array.concat(markdownPosts, javascriptPosts)
+    const posts = markdownPosts.concat(javascriptPosts)
 
     posts.sort((a, b) => {
       const c = new Date(a.date)
