@@ -11,6 +11,7 @@ import { GhostButton, ActionButton } from '../components/Button'
 import Banner from '../components/Banner'
 import Project from '../components/Project'
 import Row from '../components/Row'
+import Icon from '../components/Icon'
 import css from './index.scss'
 
 function Index() {
@@ -109,11 +110,11 @@ function Index() {
           <div>
             <h3>In der Umgebung</h3>
             <p>
-              <i className="fa fa-paper-plane" />
+              <Icon src="paper-plane" />
               <span>philipp.czernitzki@gmail.com</span>
             </p>
             <p>
-              <i className="fa fa-map-marker" />
+              <Icon src="map-marker" />
               <span>
                 Rheinland-Pfalz
                 <br />

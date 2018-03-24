@@ -1,10 +1,8 @@
 import React from 'react'
-import { withTheme } from 'styled-components'
 import { FullContainer } from '../../components/Container'
 import Post from '../../components/Post'
 import ReactStart from './ReactStart.png'
 import Banner from '../../components/Banner'
-import { BannerInner } from './style'
 
 const Training = props => (
   <FullContainer>
@@ -15,10 +13,10 @@ const Training = props => (
       alignItems="center"
       src={ReactStart}
     >
-      <BannerInner>
+      <div>
         <h1>Lerne React</h1>
         <h2>Webanwendungen der Zukunft</h2>
-      </BannerInner>
+      </div>
     </Banner>
     <Post center>
       <h1>Video Tutorial</h1>
@@ -34,4 +32,4 @@ const Training = props => (
   </FullContainer>
 )
 
-export default withTheme(Training)
+export default Training

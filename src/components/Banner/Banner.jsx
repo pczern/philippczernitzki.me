@@ -2,16 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import classNames from 'classnames'
-import css from './index.scss'
+import styles from './index.scss'
 
 const bannerBodyClass = classNames(
-  css.banner__body,
-  css['banner__body--default-color']
+  styles.banner__body,
+  styles['banner__body--default-color']
 )
 
 const Banner = props => (
   <div
-    className={css.banner}
+    className={styles.banner}
     style={{
       backgroundImage: `url(${props.src})`,
     }}

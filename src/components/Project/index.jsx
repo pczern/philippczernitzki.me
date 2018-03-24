@@ -1,8 +1,9 @@
 import React from 'react'
+
 import css from './index.scss'
 
-function Project(props) {
-  return <div className={css.project}>{props.children}</div>
+function Project() {
+  return <div className={css.project} />
 }
 
 export default Project

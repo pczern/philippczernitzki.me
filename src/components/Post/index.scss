@@ -1,7 +1,5 @@
-@value primary as _primary from '../../css/colors.scss';
-
 @mixin post {
-  padding: '2em 0em';
+  padding: 1.4em 0;
 
   p {
     color: #888;
@@ -39,7 +37,6 @@
   h2 {
     color: #333;
     font-size: 1.35em;
-    margin-top: 2em;
     margin-bottom: 0.1em;
     font-weight: 500;
   }

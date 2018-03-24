@@ -7,14 +7,12 @@ import Footer from '../components/Footer'
 import '../css/index.scss'
 
 class Template extends React.Component {
-  static propTypes = {
-    children: PropTypes.any,
-  }
   render() {
+    const { children } = this.props
     return (
       <div className="__page">
         <Header logo={LogoMe} />
-        <main className="__page__content">{this.props.children()}</main>
+        <div className="__page__content">{children()}</div>
         <Footer />
       </div>
     )

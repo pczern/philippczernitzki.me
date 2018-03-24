@@ -1,17 +1,16 @@
-@value width as _width from "../../css/dimens.scss";
+@import '../../css/dimens.scss';
 
-.container--full {
+container--full {
   width: 100%;
 }
 
 .container--boxed {
-  max-width: _width;
+  max-width: dimens();
   margin: 0 auto;
 }
 
 .container--blog {
   max-width: 800px;
-  margin: 0 auto;
 }
 
 .container--padding {

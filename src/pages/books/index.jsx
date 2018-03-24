@@ -1,12 +1,10 @@
 import React from 'react'
-
-import Book from './Book'
-import BookList from './BookList'
 import { BoxedContainer } from '../../components/Container'
+import Book from './Book'
+import books from './list.json'
+import css from './index.scss'
 
-import books from './books'
-
-export default () => (
+const BooksComp = () => (
   <BoxedContainer className="article-styles">
     <h1>Bücher</h1>
     <section>
@@ -27,16 +25,11 @@ export default () => (
     </section>
     <section>
       <h2>Meine Buchempfehlungen</h2>
-      <BookList>
+      <div className={css.bookList}>
         {books.map((book, index) => (
-          <Book
-            key={index}
-            src={book.src}
-            title={book.title}
-            book={book.description}
-          />
+          <Book key={index} src={book.src} title={book.title} />
         ))}
-      </BookList>
+      </div>
     </section>
     <section>
       <h2>Warum Englisch?</h2>
@@ -49,3 +42,5 @@ export default () => (
     </section>
   </BoxedContainer>
 )
+
+export default BooksComp

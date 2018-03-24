@@ -1,4 +1,4 @@
-@value primary from "../../css/colors.scss";
+@import '../../css/colors.scss';
 
 @mixin button() {
   border: none;
@@ -13,13 +13,13 @@
 .actionButton {
   @include button;
 
-  background-color: primary;
+  background-color: color(primary);
   color: #fff;
 }
 
 .actionButton--inverted {
   background-color: #fff;
-  color: primary;
+  color: color(primary);
 }
 
 .ghostButton {
@@ -29,7 +29,7 @@
 
   &:hover {
     background-color: #f6f6f6;
-    color: primary;
+    color: color(primary);
     font-weight: 400;
   }
 }

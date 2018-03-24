@@ -98,7 +98,9 @@ export default class Map extends React.Component {
 
     // Get the HTML DOM element that will contain your map
     // We are using a div with id="map" seen below in the <body>
-    const mapElement = document.getElementById('map')
+    let mapElement
+    if (typeof document !== undefined)
+      mapElement = document.getElementById('map')
 
     // Create the Google Map using our element and options defined above
     const map = new google.maps.Map(mapElement, mapOptions)

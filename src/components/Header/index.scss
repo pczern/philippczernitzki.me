@@ -1,5 +1,4 @@
-@value width as _width from "../../css/dimens.scss";
-@value primary as _primary from "../../css/colors.scss";
+@import '../../css/dimens.scss';
 
 .header {
   display: flex;
@@ -9,10 +8,10 @@
 }
 
 .header__nav {
-  max-width: _width;
   width: 100%;
   margin: 0 auto;
   display: flex;
+  max-width: dimens();
 }
 
 .header__navList {

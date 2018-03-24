@@ -1,3 +1,17 @@
-// stylelint-disable property-no-unknown, selector-pseudo-class-no-unknown
+$dimens: (width: 1000px);
 
-@value width 1100px;
+@function dimens($dimen-name: null, $dimen-variant: null) {
+  // color variant is optional
+  @if ($dimen-variant != null) {
+    // map inception
+    @return map-get(map-get($dimens, $dimen-name), $dimen-variant);
+  }
+
+  @if ($dimen-name == null) {
+    @return map-get($dimens, width);
+  }
+
+  @else {
+    @return map-get($dimens, $dimen-name);
+  }
+}

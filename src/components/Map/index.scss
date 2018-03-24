@@ -1,3 +1,5 @@
+@import '../../css/colors.scss';
+
 .mapBox {
   height: 370px;
 
@@ -15,6 +17,7 @@
     padding-top: 3.5em;
     height: 370px;
     color: #fff;
+    background-color: color(primary);
 
     span {
       width: 85%;
@@ -38,7 +41,7 @@
       }
     }
 
-    i {
+    svg {
       margin-top: 5px;
       margin-right: 15px;
       float: left;

@@ -1,8 +1,8 @@
-@value primary as _primary, primaryHeadline from "../css/colors.scss";
+@import '../css/index.scss';
 
 @mixin headline {
   font-size: 1.4em;
-  color: primaryHeadline;
+  color: color(primary, headline);
   margin-bottom: 2em;
   text-align: center;
   font-family: Hind, sans-serif;
@@ -63,7 +63,8 @@
   }
 }
 
-.aboutText__headline {
+.aboutText__headline,
+.headline {
   @include headline;
 }
 

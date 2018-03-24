@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Android",
+    "src": "./android.jpg",
+    "content": "Lorem ipsum"
+  },
+  {
+    "title": "C von Kopf bis Fuß",
+    "src": "./cvonkopfbisfuss.jpg",
+    "content": "Lorem ipsum"
+  },
+  {
+    "title": "Grundkurs gutes Webdesign",
+    "src": "./grundkursguteswebdesign.jpg",
+    "content": ""
+  },
+  {
+    "title": "How To Win Friends And Influence People",
+    "src": "./howtowinfriendsandinfluencepeople.jpg",
+    "content": ""
+  },
+  {
+    "title": "HTML & CSS von Kopf bis Fuß",
+    "src": "./htmlundcssvonkopfbisfuss.jpg",
+    "content": ""
+  },
+  {
+    "title": "Java 7",
+    "src": "./java7.jpg",
+    "content": ""
+  },
+  {
+    "title": "JavaScript & JQuery",
+    "src": "./javascriptandjquery.jpg",
+    "content": ""
+  },
+  {
+    "title": "Java von Kopf bis Fuß",
+    "src": "./javavonkopfbisfuss.jpg",
+    "content": ""
+  },
+  {
+    "title": "Kopf schlägt Kapital",
+    "src": "./kopfschlaegtkapital.jpg",
+    "content": ""
+  },
+  {
+    "title": "Objekt Orientierte Analyse von Kopf bis Fuß",
+    "src": "./objektorientierteanalysevonkopfbisfuss.jpg",
+    "content": ""
+  },
+  {
+    "title": "Outwitting the Devil",
+    "src": "./outwittingthedevil.jpg",
+    "content": ""
+  },
+  {
+    "title": "PHP und MySQL von Kopf bis Fuß",
+    "src": "./phpundmysqlvonkopfbisfuss.jpg",
+    "content": ""
+  },
+  {
+    "title": "Responsive Webdesign",
+    "src": "./responsivewebdesign.jpg",
+    "content": ""
+  },
+  {
+    "title": "Screw it, let's do it",
+    "src": "./screwitletsdoit.jpg",
+    "content": ""
+  },
+  {
+    "title": "Softskills",
+    "src": "./softskills.jpg",
+    "content": ""
+  },
+  {
+    "title": "Softwareentwicklung von Kopf bis Fuß",
+    "src": "./softwareentwicklungvonkopfbisfuss.jpg",
+    "content": ""
+  },
+  {
+    "title": "The E Myth Revisited",
+    "src": "./theemythrevisited.jpg",
+    "content": ""
+  },
+  {
+    "title": "WordPress 3",
+    "src": "./wordpress3.jpg",
+    "content": ""
+  },
+  {
+    "title": "Zero to One",
+    "src": "./zerotoone.jpg",
+    "content": ""
+  },
+  {
+    "title": "Extreme Ownership",
+    "src": "./extremeownership.jpg",
+    "content": ""
+  },
+  {
+    "title": "Understanding ECMAScript6",
+    "src": "./understandingecmascript6.jpg",
+    "content": ""
+  },
+  {
+    "title": "How Not To Die",
+    "src": "./hownottodie.jpg",
+    "content": ""
+  }
+]

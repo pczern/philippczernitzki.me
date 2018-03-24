@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Icon from '../Icon'
 import classNames from 'classnames'
+
+import Icon from '../Icon'
 import css from './index.scss'
 
 const iconClass = classNames('fa-fw', 'fa-xs', css.iconBox__icon)

@@ -72,8 +72,8 @@ function Footer() {
                 <BrandIcon className={css.footer__icon} src="github" />Github
               </LinkExternal>
             </li>
-            {/* <LinkItem to="https://stackoverflow.com/users/3885001/speeddeveloper" target="_blank"><StyledIcon src="stack-overflow" />Stack Overflow</LinkItem> */}
-            {/* <LinkItem to="https://www.linkedin.com/in/philipp-czernitzki-08465894/" target="_blank"><StyledIcon src="linkedin-square" />LinkedIn</LinkItem> */}
+            {/* <LinkItem to="https://stackoverflow.com/users/3885001/speeddeveloper" target="_blank"><cssdIcon src="stack-overflow" />Stack Overflow</LinkItem> */}
+            {/* <LinkItem to="https://www.linkedin.com/in/philipp-czernitzki-08465894/" target="_blank"><cssdIcon src="linkedin-square" />LinkedIn</LinkItem> */}
             <li className={css.footer__itemWithIcon}>
               <LinkExternal
                 to="skype:philipp.czernitzki@gmail.com?add"
@@ -82,7 +82,7 @@ function Footer() {
                 <BrandIcon className={css.footer_icon} src="skype" />Skype
               </LinkExternal>
             </li>
-            {/* <LinkItem to="https://stackoverflow.com/users/3885001/speeddeveloper" target="_blank"><StyledIcon src="wordpress" />WordPress</LinkItem> */}
+            {/* <LinkItem to="https://stackoverflow.com/users/3885001/speeddeveloper" target="_blank"><cssdIcon src="wordpress" />WordPress</LinkItem> */}
             <li className={css.footer__itemWithIcon}>
               <LinkExternal to="http://bcert.me/szssafdr" target="_blank">
                 <BrandIcon className={css.footer__icon} src="android" />Android

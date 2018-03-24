@@ -1,21 +1,17 @@
-// stylelint-disable property-no-unknown, selector-pseudo-class-no-unknown
-// we need to use :export because @value has an error with colors
-// postcss calc needs to run after css-loader but this is just not the case
+$colors: (
+  primary: (default: #0079b1, headline: #222, text: #888),
+  secondary: (headline: #616161, text: #666),
+  banner: (default: rgba(0, 121, 177, 0.8), green: #0f0, blue: #00f, red: #f00)
+);
 
-//@value primary #0079b1;
-//
-:export {
-  primary: #fff;
-  banner-red: #f00;
-  banner-green: #0f0;
-  banner-blue: #00f;
-  banner-default: rgba(0, 121, 177, 0.8);
-  primary-text: #888;
-  primary-headline: #222;
-  secondary-headline: #616161;
-  secondary-text: #666;
+@function color($color-name: primary, $color-variant: null) {
+  // color variant is optional
+  @if ($color-variant != null) {
+    // map inception
+    @return map-get(map-get($colors, $color-name), $color-variant);
+  }
+
+  @else {
+    @return map-get(map-get($colors, $color-name), default);
+  }
 }
-
-// alternative good colors: #08607b
-
-$primary: #000;

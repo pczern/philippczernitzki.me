@@ -1,8 +1,4 @@
 :global {
-  $color: rgba(0, 0, 0, 0);
-  $width: 1000px !global;
-  $primary: #0079b1 !global;
-
   html {
     height: 100%;
     -ms-text-size-adjust: 100%;
@@ -39,7 +35,7 @@
     margin: 0;
 
     /*
-    font: 16px/1 sans-serif; */
+  font: 16px/1 sans-serif; */
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     -moz-osx-font-smoothing: grayscale;
@@ -138,9 +134,4 @@
     padding-bottom: 4em;
     flex: 1;
   }
-
-  /* .main-content li{
-  line-height: 1.7;
-  margin-left: 1.3em;
-} */
 }

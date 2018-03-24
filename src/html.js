@@ -1,7 +1,4 @@
-/* eslint global-require: "off" */
-
-import React from 'react'
-
+import React from "react"
 
 let stylesStr
 if (process.env.NODE_ENV === `production`) {
@@ -12,42 +9,43 @@ if (process.env.NODE_ENV === `production`) {
   }
 }
 
-module.exports = props => {
-  let css
-  if (process.env.NODE_ENV === `production`) {
-    css = (
-      <style
-        id="gatsby-inlined-css"
-        dangerouslySetInnerHTML={{ __html: stylesStr }}
-      />
+module.exports = class HTML extends React.Component {
+  render() {
+    let css
+    if (process.env.NODE_ENV === `production`) {
+      css = (
+        <style
+          id="gatsby-inlined-css"
+          dangerouslySetInnerHTML={{ __html: stylesStr }}
+        />
+      )
+    }
+    return (
+      <html {...this.props.htmlAttributes}>
+        <head>
+          <meta charSet="utf-8" />
+          <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          />
+          {this.props.headComponents}
+          {css}
+        </head>
+        <body {...this.props.bodyAttributes}>
+          {this.props.preBodyComponents}
+          <div
+            key={`body`}
+            id="___gatsby"
+            dangerouslySetInnerHTML={{ __html: this.props.body }}
+          />
+          {this.props.postBodyComponents}
+          <script
+          type="text/javascript"
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbXsR79I14p1ZDwq6YWv5XYd80G7OCOVs"
+/>
+        </body>
+      </html>
     )
   }
-  return (
-    <html lang="de" {...props.htmlAttributes}>
-      <head>
-        <meta charSet="utf-8" />
-        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-
-        {css}
-        {props.headComponents}
-      </head>
-      <body {...props.bodyAttributes}>
-        {props.preBodyComponents}
-        <div
-          key="body"
-          id="___gatsby"
-          dangerouslySetInnerHTML={{ __html: props.body }}
-        />
-        {props.postBodyComponents}
-        <script
-          type="text/javascript"
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbXsR79I14p1ZDwq6YWv5XYd80G7OCOVs&callback=initMap"
-        />
-      </body>
-    </html>
-  )
 }

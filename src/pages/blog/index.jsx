@@ -2,15 +2,10 @@ import React from 'react'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import GatsbyLink from 'gatsby-link'
-import styled from 'styled-components'
 
 import PostModel from '../../models/Post'
 import { ShortPost } from '../../components/Post'
 import { BlogContainer } from '../../components/Container'
-
-const Date = styled.small`
-  color: ${props => props.theme.primary};
-`
 
 class BlogIndex extends React.Component {
   render() {
