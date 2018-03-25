@@ -14,7 +14,13 @@ function ContactModal(props) {
   }
   return (
     <Modal {...props} className={css.contact} isOpen={props.isOpen}>
-      <form name="contact" method="POST" netlify>
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        netlify
+      >
         <ModalHeader>Contact Me</ModalHeader>
         <ModalContent className={css.contact__content}>
           Not working Currently, use my email below
