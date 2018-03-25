@@ -40,7 +40,7 @@ function ContactModal(props) {
         <ModalFooter className={css.contact__footer}>
           <ModalButton
             type="submit"
-            onClick={this.handleClick}
+            onClick={handleClick}
             className={css.contact__button}
           >
             Send Message
