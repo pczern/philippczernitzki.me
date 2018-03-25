@@ -12,7 +12,9 @@ import Banner from '../components/Banner'
 import Project from '../components/Project'
 import Row from '../components/Row'
 import Icon from '../components/Icon'
-import css from './index.scss'
+import css from './index/index.scss'
+
+// import projects from './index/projects/index.json'
 
 function Index() {
   const siteTitle = get(this, 'props.data.site.siteMetadata.title')
@@ -30,7 +32,7 @@ function Index() {
           </div>
         </BoxedContainer>
       </Banner>
-      <BoxedContainer padding="4em">
+      <BoxedContainer key={1} padding="4em">
         <Row cols={4}>
           <IconBox icon="code">7 Jahre Erfahrung</IconBox>
           <IconBox icon={['fab', 'react']}>React.js</IconBox>
@@ -40,10 +42,7 @@ function Index() {
           </IconBox>
         </Row>
       </BoxedContainer>
-      {/* <BoxedContainer>
-          <p>Freiheit, Leben, Gesundheit, Sport</p>
-        </BoxedContainer> */}
-      <BoxedContainer padding="0em 0em 4em" className={css.topContact}>
+      <BoxedContainer key={2} padding="0em 0em 4em" className={css.topContact}>
         <ActionButton className={css.topContent__contactButton}>
           Kontaktiere Mich Jetzt
         </ActionButton>
@@ -55,7 +54,7 @@ function Index() {
       <FullContainer className={css.aboutText} backgroundColor="#F9F9F9">
         <BoxedContainer padding="4em">
           <h2 className={css.aboutText__headline}>Was Ich Mache</h2>
-          <Row padding="0em 0em" cols={2}>
+          <Row key={1} padding="0em 0em" cols={2}>
             <div className={css.aboutText__textBox}>
               <h3>React & Android</h3>
               <p>
@@ -74,7 +73,7 @@ function Index() {
               </p>
             </div>
           </Row>
-          <Row padding="2em 0em 1em" cols={2}>
+          <Row key={2} padding="2em 0em 1em" cols={2}>
             <div className={css.aboutText__textBox}>
               <h3>Blog</h3>
               <p>
@@ -95,16 +94,26 @@ function Index() {
           </Row>
         </BoxedContainer>
       </FullContainer>
-      <BoxedContainer padding="4em" className={css.projects}>
+      <BoxedContainer key={3} padding="4em" className={css.projects}>
         <h2 className={css.headline}>Meine Projekte</h2>
-        <Row cols={2}>
-          <Project />
-          <Project />
-          <Project />
-          <Project />
-        </Row>
+        {/* <Row cols={3}>
+          {projects.map(project => {
+            const newProject = Object.assign({}, project, {
+              image: require(`./index/projects/speeddeveloper.png`),
+            })
+            console.log(newProject)
+
+            return (
+              <Project
+                key={project.id}
+                className={css.project}
+                project={newProject}
+              />
+            )
+          })}
+        </Row> */}
       </BoxedContainer>
-      <BoxedContainer padding="5em 0em 7em">
+      <BoxedContainer key={4} padding="5em 0em 7em">
         <MapBox>
           <Map />
           <div>

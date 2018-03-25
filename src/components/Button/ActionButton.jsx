@@ -17,7 +17,7 @@ function ActionButton(props) {
 ActionButton.propTypes = {
   // eslint-disable-next-line
   invert: PropTypes.bool,
-  children: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 }
 ActionButton.defaultProps = {
   invert: false,

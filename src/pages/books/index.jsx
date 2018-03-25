@@ -1,6 +1,6 @@
 import React from 'react'
 import { BoxedContainer } from '../../components/Container'
-import Book from './Book'
+import Book from '../../components/Book'
 import books from './list.json'
 import css from './index.scss'
 
@@ -26,9 +26,10 @@ const BooksComp = () => (
     <section>
       <h2>Meine Buchempfehlungen</h2>
       <div className={css.bookList}>
-        {books.map((book, index) => (
-          <Book key={index} src={book.src} title={book.title} />
-        ))}
+        {books.map(
+          (book, index) =>
+            null //  <Book key={index} src={book.src} title={book.title} />
+        )}
       </div>
     </section>
     <section>
@@ -44,3 +45,12 @@ const BooksComp = () => (
 )
 
 export default BooksComp
+export const pageQuery = graphql`
+  query PageBookQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`

@@ -6,19 +6,13 @@ import Banner from '../../components/Banner'
 
 const Training = props => (
   <FullContainer>
-    <Banner
-      height={300}
-      red
-      justifyContent="center"
-      alignItems="center"
-      src={ReactStart}
-    >
+    <Banner height={300} src={ReactStart}>
       <div>
         <h1>Lerne React</h1>
         <h2>Webanwendungen der Zukunft</h2>
       </div>
     </Banner>
-    <Post center>
+    <Post>
       <h1>Video Tutorial</h1>
       <iframe
         title="Youtube"
@@ -33,3 +27,12 @@ const Training = props => (
 )
 
 export default Training
+export const pageQuery = graphql`
+  query PageTrainingQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`

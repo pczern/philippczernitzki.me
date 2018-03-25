@@ -17,10 +17,7 @@ function Post(props) {
 
 Post.propTypes = {
   children: PropTypes.node.isRequired,
-  center: PropTypes.bool,
 }
-Post.defaultProps = {
-  center: true,
-}
+Post.defaultProps = {}
 
 export default Post

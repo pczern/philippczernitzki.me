@@ -1,5 +1,3 @@
-@import '../css/index.scss';
-
 @mixin headline {
   font-size: 1.4em;
   color: color(primary, headline);
@@ -74,9 +72,8 @@
 
 .project {
   height: 200px;
-  width: 100%;
-  background-color: #aaa;
-  margin: 0 2.5%;
+  width: 90%;
+  margin: 0 5%;
 }
 
 .topBanner {

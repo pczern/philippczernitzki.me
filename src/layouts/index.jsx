@@ -6,17 +6,17 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import '../css/index.scss'
 
-class Template extends React.Component {
-  render() {
-    const { children } = this.props
-    return (
-      <div className="__page">
-        <Header logo={LogoMe} />
-        <div className="__page__content">{children()}</div>
-        <Footer />
-      </div>
-    )
-  }
+function Template(props) {
+  return (
+    <div className="__page">
+      <Header logo={LogoMe} />
+      <div className="__page__content">{props.children()}</div>
+      <Footer />
+    </div>
+  )
+}
+Template.propTypes = {
+  children: PropTypes.any,
 }
 
 export default Template

@@ -4,7 +4,6 @@ module.exports = async ({ page, boundActionCreators }) => {
   const { createPage } = boundActionCreators
 
   return new Promise((resolve, reject) => {
-    console.log(page)
     // if (page.path.match(/^\//)) {
     //   // It's assumed that `landingPage.js` exists in the `/layouts/` directory
     //   page.layout = 'index'
