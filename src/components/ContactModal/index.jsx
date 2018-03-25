@@ -20,11 +20,9 @@ function ContactModal(props) {
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        netlify
       >
         <ModalHeader>Contact Me</ModalHeader>
         <ModalContent className={css.contact__content}>
-          Not working Currently, use my email below
           <div>
             {/* <label htmlFor="contact-name">Name:</label> */}
             <input
