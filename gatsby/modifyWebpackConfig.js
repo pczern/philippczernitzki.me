@@ -3,6 +3,8 @@
 // const util = require('util')
 
 const { cssModulesConfig } = require('gatsby-1-config-css-modules')
+
+const { extractTextPlugin } = require(`gatsby-1-config-extract-plugin`)
 // const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 // const ExtractTextInstance = new ExtractTextPlugin('styles.css')
@@ -37,6 +39,13 @@ module.exports = ({ config, stage }, { precision }) => {
     case `develop-html`:
     case `build-html`:
     case `build-javascript`:
+      config.loader(`my-css`, {
+        test: sassFiles,
+        loader: extractTextPlugin(stage).extract(`style`, [
+          cssModulesConfig(stage),
+          sassLoader,
+        ]),
+      })
       // config.loader(`my-css`, {
       //   test: sassFiles,
       //   loader: ExtractTextPlugin.extract(`style`, [
