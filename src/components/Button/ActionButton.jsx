@@ -6,6 +6,7 @@ import css from './index.scss'
 function ActionButton(props) {
   return (
     <button
+      onClick={props.onClick}
       className={classNames(css.actionButton, {
         [css['actionButton--inverted']]: props.invert,
       })}

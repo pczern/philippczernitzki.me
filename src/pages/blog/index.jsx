@@ -50,25 +50,23 @@ class BlogIndex extends React.Component {
     })
 
     return (
-      <div>
+      <BlogContainer padding="0 0 2em">
         <Helmet title={siteTitle} />
 
-        <BlogContainer>
-          {posts.map(post => {
-            if (post.isPublished)
-              return (
-                <ShortPost key={post.slug}>
-                  <GatsbyLink to={`${post.slug}`}>
-                    <h2>{post.title}</h2>
-                  </GatsbyLink>
-                  <time>{post.date}</time>
-                  <p>{post.excerpt}</p>
-                </ShortPost>
-              )
-            return null
-          })}
-        </BlogContainer>
-      </div>
+        {posts.map(post => {
+          if (post.isPublished)
+            return (
+              <ShortPost key={post.slug}>
+                <GatsbyLink to={`${post.slug}`}>
+                  <h2>{post.title}</h2>
+                </GatsbyLink>
+                <time>{post.date}</time>
+                <p>{post.excerpt}</p>
+              </ShortPost>
+            )
+          return null
+        })}
+      </BlogContainer>
     )
   }
 }
@@ -76,7 +74,7 @@ class BlogIndex extends React.Component {
 export default BlogIndex
 
 export const pageQuery = graphql`
-  query BlogQuery {
+  query TheBlogQuery {
     site {
       siteMetadata {
         title

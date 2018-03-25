@@ -1,4 +1,8 @@
-$dimens: (width: 1000px);
+$dimens: (
+  width: 1000px,
+  tablet: 780px,
+  phone: 500px
+);
 
 @function dimens($dimen-name: null, $dimen-variant: null) {
   // color variant is optional

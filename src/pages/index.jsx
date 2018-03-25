@@ -12,139 +12,152 @@ import Banner from '../components/Banner'
 import Project from '../components/Project'
 import Row from '../components/Row'
 import Icon from '../components/Icon'
+import Divider from '../components/Divider'
+import ContactModal from '../components/ContactModal'
 import css from './index/index.scss'
 
-// import projects from './index/projects/index.json'
+import projects from './index/projects/index.json'
 
-function Index() {
-  const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+class Index extends React.Component {
+  state = {
+    isContacting: false,
+  }
+  handleOnSent = () => {
+    this.setState({ isContacting: false })
+  }
 
-  return (
-    <div>
-      <Helmet title={siteTitle} />
-      <Banner src={BannerImage}>
-        <BoxedContainer className={css.topBanner}>
-          <h1>Software Engineer</h1>
-          <h2>React & Android Expert, 7 Years Experience, 2018</h2>
-          <div>
-            <GhostButton>Schreib mir</GhostButton>
-            <ActionButton invert>React Webinar</ActionButton>
-          </div>
-        </BoxedContainer>
-      </Banner>
-      <BoxedContainer key={1} padding="4em">
-        <Row cols={4}>
-          <IconBox icon="code">7 Jahre Erfahrung</IconBox>
-          <IconBox icon={['fab', 'react']}>React.js</IconBox>
-          <IconBox icon="briefcase">Unternehmer</IconBox>
-          <IconBox icon={['fab', 'android']}>
-            Zertifizierter Android Dev
-          </IconBox>
-        </Row>
-      </BoxedContainer>
-      <BoxedContainer key={2} padding="0em 0em 4em" className={css.topContact}>
-        <ActionButton className={css.topContent__contactButton}>
-          Kontaktiere Mich Jetzt
-        </ActionButton>
-        <ActionButton invert className={css.topContent__emailButton}>
-          <i className="fa fa-send" />
-          me@philippczernitzki.me
-        </ActionButton>
-      </BoxedContainer>
-      <FullContainer className={css.aboutText} backgroundColor="#F9F9F9">
-        <BoxedContainer padding="4em">
-          <h2 className={css.aboutText__headline}>Was Ich Mache</h2>
-          <Row key={1} padding="0em 0em" cols={2}>
-            <div className={css.aboutText__textBox}>
-              <h3>React & Android</h3>
-              <p>
-                Im Bereich Web & App Entwicklung habe ich mehrere Jahre
-                Erfahrung. React.js, eine JavaScript Bibliothek um ausgiebige
-                und faszinierende Webapps zu schreiben wird in den kommenden
-                Jahren das Web erobern.
-              </p>
+  handleContacting = () => {
+    this.setState({ isContacting: true })
+  }
+
+  render() {
+    return (
+      <div>
+        <Banner src={BannerImage}>
+          <BoxedContainer className={css.topBanner}>
+            <h1>Software Engineer</h1>
+            <h2>React & Android Expert, 7 Years Experience, 2018</h2>
+            <div>
+              <GhostButton onClick={this.handleContacting}>
+                Schreib mir
+              </GhostButton>
+              <ActionButton invert>React Webinar</ActionButton>
             </div>
-            <div className={css.aboutText__textBox}>
-              <h3>Webinar</h3>
-              <p>
-                In einem speziell angefertigten Webinar über React.js zeige ich
-                euch alle Tricks die ich über die Jahre gelernt habe. Nach
-                einigen Sessions könnt ihr eure eigenen User Interfaces bauen.
-              </p>
-            </div>
-          </Row>
-          <Row key={2} padding="2em 0em 1em" cols={2}>
-            <div className={css.aboutText__textBox}>
-              <h3>Blog</h3>
-              <p>
-                Auf meinem Blog könnt Ihr in kürze Artikel zu den
-                verschiedensten Themen finden. Es geht um Themen die mich
-                beschäftigen wie die Softwareentwicklung aber auch Themen wie
-                Gesundheit, Sport und Disziplin.
-              </p>
-            </div>
-            <div className={css.aboutText__textBox}>
-              <h3>Youtube</h3>
-              <p>
-                In den kommenden Monaten werde ich auf Youtube neue Videos über
-                React.js posten. In kürze könnt Ihr die großartigsten Webapps
-                der Welt schreiben :)
-              </p>
-            </div>
+          </BoxedContainer>
+        </Banner>
+        <BoxedContainer className={css.icons} key={1}>
+          <Row className={css.icons__row} cols={4}>
+            <IconBox icon="code">7 Years Experience</IconBox>
+            <IconBox icon={['fab', 'react']}>React.js Expert</IconBox>
+            <IconBox icon="briefcase">Unternehmer</IconBox>
+            <IconBox icon={['fab', 'android']}>Certified Android Dev</IconBox>
           </Row>
         </BoxedContainer>
-      </FullContainer>
-      <BoxedContainer key={3} padding="4em" className={css.projects}>
-        <h2 className={css.headline}>Meine Projekte</h2>
-        {/* <Row cols={3}>
-          {projects.map(project => {
-            const newProject = Object.assign({}, project, {
-              image: require(`./index/projects/speeddeveloper.png`),
-            })
-            console.log(newProject)
+        <BoxedContainer key={2} className={css.topContact}>
+          <ActionButton
+            onClick={this.handleContacting}
+            className={css.topContent__contactButton}
+          >
+            Get in Touch with me
+          </ActionButton>
+          <ActionButton
+            onClick={this.handleContacting}
+            invert
+            className={css.topContent__emailButton}
+          >
+            <i className="fa fa-send" />
+            me@philippczernitzki.me
+          </ActionButton>
+        </BoxedContainer>
+        <FullContainer className={css.aboutText} backgroundColor="#F9F9F9">
+          <BoxedContainer className={css.aboutText__boxed}>
+            <h2 className={css.aboutText__headline}>Was Ich Mache</h2>
+            <Row key={1} className={css.aboutText__row} cols={2}>
+              <div className={css.aboutText__textBox}>
+                <h3>React</h3>
+                <p>
+                  Everyday I am working with React.js, a beautiful technology
+                  for creating Web Applications. In the next years it will start
+                  growing in the Web like WordPress once did.
+                </p>
+              </div>
+              <div className={css.aboutText__textBox}>
+                <h3>Android</h3>
+                <p>
+                  The biggest platform for app development is and remains
+                  Android. As an Certified Android Associate Developer I am able
+                  to create the most amazing apps ever possible.
+                </p>
+              </div>
+            </Row>
+            <Row key={2} className={css.aboutText__row} cols={2}>
+              <div className={css.aboutText__textBox}>
+                <h3>Blog</h3>
+                <p>
+                  On my blog I write about stuff, that I care about. It's about
+                  subjects I like and find worth sharing. Check it out for
+                  awesome articles about React.js, Health, Motivation, Business.
+                </p>
+              </div>
+              <div className={css.aboutText__textBox}>
+                <h3>Youtube</h3>
+                <p>
+                  I published the first ever german video about React.js on
+                  youtube. If you are interested check it out. Many new videos
+                  will follow in the next weeks about ES6, Webpack, GatsbyJs,
+                  ESLint.
+                </p>
+              </div>
+            </Row>
+          </BoxedContainer>
+        </FullContainer>
+        <BoxedContainer key={3} padding="4em" className={css.projects}>
+          <h2 className={css.headline}>Some Projects</h2>
+          <Row className={css.projects__row} cols={3}>
+            {projects.map(project => {
+              const newProject = Object.assign({}, project, {
+                image: require(`./index/projects/${project.image}`),
+              })
 
-            return (
-              <Project
-                key={project.id}
-                className={css.project}
-                project={newProject}
-              />
-            )
-          })}
-        </Row> */}
-      </BoxedContainer>
-      <BoxedContainer key={4} padding="5em 0em 7em">
-        <MapBox>
-          <Map />
-          <div>
-            <h3>In der Umgebung</h3>
-            <p>
-              <Icon src="paper-plane" />
-              <span>philipp.czernitzki@gmail.com</span>
-            </p>
-            <p>
-              <Icon src="map-marker" />
-              <span>
-                Rheinland-Pfalz
-                <br />
-                Deutschland
-              </span>
-            </p>
-          </div>
-        </MapBox>
-      </BoxedContainer>
-    </div>
-  )
+              return (
+                <Project
+                  key={project.id}
+                  className={css.project}
+                  project={newProject}
+                />
+              )
+            })}
+          </Row>
+        </BoxedContainer>
+        <Divider width="600px" />
+        <BoxedContainer key={4} padding="5em 0em 7em">
+          <MapBox>
+            <Map />
+            <div>
+              <h3>In der Umgebung</h3>
+              <p>
+                <Icon src="paper-plane" />
+                <span>philipp.czernitzki@gmail.com</span>
+              </p>
+              <p>
+                <Icon src="map-marker" />
+                <span>
+                  Rheinland-Pfalz
+                  <br />
+                  Deutschland
+                </span>
+              </p>
+            </div>
+          </MapBox>
+        </BoxedContainer>
+        <ContactModal
+          closeFromEverywhere
+          isOpen={this.state.isContacting}
+          onSent={this.handleOnSent}
+        />
+      </div>
+    )
+  }
 }
 
 export default Index
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

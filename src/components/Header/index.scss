@@ -1,8 +1,7 @@
 @import '../../css/dimens.scss';
+@import '../../css/colors.scss';
 
 .header {
-  display: flex;
-  align-items: center;
   padding: 2.8em 0;
   font-family: Muli, sans-serif;
 }
@@ -12,6 +11,14 @@
   margin: 0 auto;
   display: flex;
   max-width: dimens();
+
+  h2 {
+    color: color(logo, title);
+  }
+
+  h3 {
+    color: color(logo, subtitle);
+  }
 }
 
 .header__navList {
@@ -23,7 +30,6 @@
 
 .header__navItem {
   font-size: 1.1em;
-  color: #333;
   margin: 0 2em;
   line-height: 2;
   display: block;
@@ -34,9 +40,10 @@
     padding: 0 0;
     box-sizing: border-box;
     border-bottom: solid 2px transparent;
+    color: color(header, navLink);
 
     &:hover {
-      border-bottom: solid 2px _primary;
+      border-bottom: solid 2px color(header, navLinkUnderline);
     }
   }
 }

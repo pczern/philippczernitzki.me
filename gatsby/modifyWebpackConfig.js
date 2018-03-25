@@ -3,9 +3,9 @@
 // const util = require('util')
 
 const { cssModulesConfig } = require('gatsby-1-config-css-modules')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+// const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-const ExtractTextInstance = new ExtractTextPlugin('styles.css')
+// const ExtractTextInstance = new ExtractTextPlugin('styles.css')
 
 module.exports = ({ config, stage }, { precision }) => {
   const sassFiles = /\.(s[ac]ss|css)$/
@@ -25,25 +25,25 @@ module.exports = ({ config, stage }, { precision }) => {
         loaders: [`style`, cssModulesConfig(stage), sassLoader],
       })
 
-      config.preLoader(`js`, {
-        test: jsFiles,
-        loader: ExtractTextInstance.extract([`css-literal`]),
-      })
-
-      config.plugin('extract-css-literal', ExtractTextInstance.constructor)
+      // config.preLoader(`js`, {
+      //   test: jsFiles,
+      //   loader: ExtractTextInstance.extract([`css-literal`]),
+      // })
+      //
+      // config.plugin('extract-css-literal', ExtractTextInstance.constructor)
 
       return config
     case `build-css`:
     case `develop-html`:
     case `build-html`:
     case `build-javascript`:
-      config.loader(`my-css`, {
-        test: sassFiles,
-        loader: ExtractTextPlugin.extract(`style`, [
-          cssModulesConfig(stage),
-          sassLoader,
-        ]),
-      })
+      // config.loader(`my-css`, {
+      //   test: sassFiles,
+      //   loader: ExtractTextPlugin.extract(`style`, [
+      //     cssModulesConfig(stage),
+      //     sassLoader,
+      //   ]),
+      // })
       return config
     default:
       return config

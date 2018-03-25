@@ -1,6 +1,6 @@
 @import '../../css/dimens.scss';
 
-container--full {
+.container--full {
   width: 100%;
 }
 
@@ -15,4 +15,12 @@ container--full {
 
 .container--padding {
   padding: 0 5%;
+}
+
+@media (max-width: 1120px) {
+  .container--full,
+  .container--boxed {
+    width: 100%;
+    padding: 0 5%;
+  }
 }

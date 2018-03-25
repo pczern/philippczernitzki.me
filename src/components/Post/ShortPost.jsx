@@ -8,11 +8,9 @@ const shortPostClass = css['post--short']
 function Post(props) {
   if (props.center)
     return (
-      <BoxedContainer>
-        <article className={shortPostClass} {...props}>
-          {props.children}
-        </article>
-      </BoxedContainer>
+      <article className={shortPostClass} {...props}>
+        {props.children}
+      </article>
     )
   return <article className={shortPostClass}>{props.children}</article>
 }

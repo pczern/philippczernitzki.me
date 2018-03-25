@@ -1,3 +1,5 @@
+@import '../../css/dimens.scss';
+
 @mixin headline {
   font-size: 1.4em;
   color: color(primary, headline);
@@ -10,6 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 0 4em;
 }
 
 .topContact__contactButton {
@@ -38,13 +41,7 @@
 }
 
 .aboutText__textBox {
-  &:nth-child(odd) {
-    padding: 0 2.5% 0 4%;
-  }
-
-  &:nth-child(even) {
-    padding: 0 4% 0 2.5%;
-  }
+  margin-bottom: 2em;
 
   h3 {
     font-size: 1.5em;
@@ -61,33 +58,49 @@
   }
 }
 
+.aboutText__row {
+  padding: 1em 0;
+
+  & > div:nth-child(odd) {
+    padding: 0 3% 0 0;
+  }
+
+  & > div:nth-child(even) {
+    padding: 0 0 0 3%;
+  }
+}
+
 .aboutText__headline,
 .headline {
   @include headline;
 }
 
 .aboutText {
+  padding: 4em 0 4em 0;
   background-color: #f9f9f9;
+}
+
+.aboutText__boxed {
+  max-width: 850px;
 }
 
 .project {
   height: 200px;
-  width: 90%;
-  margin: 0 5%;
 }
 
 .topBanner {
   h1 {
     margin-bottom: 0.1em;
     font-weight: 600;
+    line-height: 1;
   }
 
   h2 {
     margin-bottom: 1.4em;
   }
 
-  button:nth-child(2) {
-    margin-left: 2em;
+  button:nth-child(1) {
+    margin-right: 2em;
   }
 
   height: 100%;
@@ -95,4 +108,69 @@
   flex-direction: column;
   justify-content: center;
   align-items: left;
+}
+
+.icons {
+  padding: 4em;
+}
+
+.projects__row {
+  & > div {
+    padding: 0 1em;
+  }
+}
+
+@media (max-width: dimens(phone)) {
+  .topBanner {
+    button {
+      margin-top: 1em;
+    }
+  }
+
+  .icons {
+    padding: 4em 0 1em;
+  }
+
+  .icons__row > div {
+    margin-bottom: 3em;
+  }
+
+  .aboutText__row {
+    padding: 0 5%;
+
+    & > div:nth-child(odd) {
+      padding: 0;
+    }
+
+    & > div:nth-child(even) {
+      padding: 0;
+    }
+  }
+
+  .topContact {
+    flex-direction: column;
+    padding: 0 5%;
+
+    & > button {
+      margin-bottom: 2em;
+    }
+  }
+}
+
+@media (max-width: dimens(tablet)) {
+  .project {
+    margin: 0;
+    margin-bottom: 4em;
+    width: 100%;
+    box-shadow: 0 0 3px #ddd;
+  }
+
+  .project__row {
+    width: 100%;
+
+    & > div {
+      width: 100%;
+      padding: 0%;
+    }
+  }
 }

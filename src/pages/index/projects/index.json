@@ -1,23 +1,42 @@
 [
   {
-    "title": "Fiverr",
-    "description":
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "image": "fiverr.png",
-    "id": 1
-  },
-  {
-    "id": 2,
-    "title": "Eigene Webseite",
-    "description":
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "image": "speeddeveloper.png"
-  },
-  {
     "id": 3,
     "title": "Venos",
     "description":
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "Working together with Jason Procka we build a webapp, that stores uploaded files in Google Drive and makes them downloadable in an intuitve UI",
+    "technologies": [
+      "React.js",
+      "Webpack",
+      "Google Cloud Storage API",
+      "Firebase",
+      "ExpressJS",
+      "Node.js"
+    ],
+    "link": "https://github.com/JasonProcka/venos",
     "image": "venos.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Website about myself",
+    "description":
+      "A website I built around age 15. It was a nice start and a good prototype. Today you are on my new 10x website!",
+    "technologies": [
+      "jQuery",
+      "Responsive Webdesign",
+      "HTML5",
+      "CSS3",
+      "Meyerweb Reset CSS"
+    ],
+    "link": "https://github.com/speedDeveloper/speeddeveloper.me",
+    "image": "speeddeveloper.png"
+  },
+
+  {
+    "title": "Fiverr",
+    "description":
+      "I customized a website that I was working on to make a cool Screenshot. It was intended to get one of my Fiverr Gigs running. Back on Fiverr I got a 5 Star Rating from all of my clients.",
+    "link": "https://www.fiverr.com/speeddeveloper",
+    "image": "fiverr.png",
+    "id": 1
   }
 ]

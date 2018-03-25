@@ -1,8 +1,10 @@
+@import '../../css/colors.scss';
+
 @mixin post {
   padding: 1.4em 0;
 
   p {
-    color: #888;
+    color: color(primary, text);
     font-weight: 300;
     line-height: 1.7;
     font-size: 1.07em;
@@ -49,14 +51,15 @@
   li {
     line-height: 1.7;
     margin-left: 1.3em;
+    color: #111;
 
-    & > * {
-      color: #888;
+    * {
+      color: color(primary, text);
     }
-  }
 
-  a {
-    color: _primary;
+    a {
+      color: color(link);
+    }
   }
 }
 
@@ -73,8 +76,6 @@
     font-size: 2.1em;
     font-weight: 500;
   }
-
-  margin-top: 4em;
 
   &:first-of-type {
     margin-top: 0;

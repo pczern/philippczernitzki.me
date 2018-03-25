@@ -1,0 +1,44 @@
+.contact {
+}
+
+.contact__button {
+  margin-left: auto;
+}
+
+.contact__content {
+  padding-top: 1.5em;
+
+  svg {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+    text-shadow: 0 0 5px #eee;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.2em;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    color: #333;
+    font-weight: 300;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  & > div {
+    margin-bottom: 2em;
+  }
+}
+
+.contact__footer {
+  text-align: right;
+}

@@ -15,7 +15,13 @@ Col.defaultProps = {
 
 function Row(props) {
   return (
-    <div className={classNames(css.row, css[`row--${props.cols}`])}>
+    <div
+      className={classNames(
+        css.row,
+        css[`row--${props.cols}`],
+        props.className
+      )}
+    >
       {props.children.map((child, i) => <Col key={i}>{child}</Col>)}
     </div>
   )

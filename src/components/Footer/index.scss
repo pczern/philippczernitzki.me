@@ -6,7 +6,6 @@
   font-family: 'Hind', sans-serif;
   background-color: #0e0e0e;
   padding: 3em 0;
-  display: flex;
 }
 
 .footer__body {
@@ -48,4 +47,16 @@
 
 .footer__col {
   width: 33.333333%;
+}
+
+@media (max-width: dimens(phone)) {
+  .footer__body {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .footer__col {
+    width: 100%;
+    margin-bottom: 3em;
+  }
 }

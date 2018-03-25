@@ -15,9 +15,28 @@ class Project extends React.Component {
     }))
   }
   render() {
+    const technologies = this.props.project.technologies && (
+      <p className={css.technologies}>
+        <strong>Technologies: </strong>
+        {this.props.project.technologies.map((technology, i, arr) => [
+          <span className={css.technologies__item}>{technology}</span>,
+          i !== arr.length - 1 ? ', ' : null,
+        ])}
+      </p>
+    )
+    const link = this.props.project.link && (
+      <p className={css.project__linkSection}>
+        <strong>Link: </strong>
+        <a className={css.project__link} href={this.props.project.link}>
+          {this.props.project.link}
+        </a>
+      </p>
+    )
+
     return (
       <div
         className={classNames(css.project, this.props.className)}
+        role="presentation"
         style={{
           backgroundImage: `url(${this.props.project.image})`,
         }}
@@ -36,6 +55,8 @@ class Project extends React.Component {
             />
             <h2>{this.props.project.title}</h2>
             <p>{this.props.project.description}</p>
+            {technologies}
+            {link}
           </div>
         </div>
       </div>
@@ -43,14 +64,15 @@ class Project extends React.Component {
   }
 }
 Project.propTypes = {
+  className: PropTypes.string,
   project: PropTypes.shape({
     image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    technologies: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
-  className: PropTypes.string,
 }
-PropTypes.defaultProps = {
+Project.defaultProps = {
   className: null,
 }
 export default Project

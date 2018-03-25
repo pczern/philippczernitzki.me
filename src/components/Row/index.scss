@@ -1,3 +1,5 @@
+@import '../../css/dimens.scss';
+
 .row {
   display: flex;
   flex-direction: row;
@@ -24,5 +26,15 @@
 .row--4 {
   & > .col {
     width: 25%;
+  }
+}
+
+@media (max-width: dimens(phone)) {
+  .row {
+    display: block;
+
+    & > .col {
+      width: 100%;
+    }
   }
 }

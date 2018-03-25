@@ -34,6 +34,7 @@ module.exports = ({ graphql, boundActionCreators }) => {
         // Create blog posts pages.
         if (result.data)
           _.each(result.data.allMarkdownRemark.edges, edge => {
+            console.log(edge.node.fields.slug)
             if (edge.node.frontmatter.published)
               createPage({
                 path: `${edge.node.fields.slug}`,
