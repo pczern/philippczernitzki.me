@@ -4,4 +4,11 @@ date: "2018-01-20T11:46:00.169Z"
 published: true
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Here's my list of the best channels for entrepreneurs. Here you get taught how to get your business running, what you need to do in order to prepare you for success. World class entrepreneurs are showing you their mindsets, thus opening you a new way of seeing the world. But don't get soaked up by the videos, don't forget to take the action. Just getting the motivation isn't enough. You need to always take action.
+
+* [Bedros Keuilian](https://www.youtube.com/user/KeuilianInc/videos)
+* [Valuetainment](https://www.youtube.com/channel/UCIHdDJ0tjn_3j-FS7s_X1kQ)
+* [Tom Bilyeu](https://www.youtube.com/channel/UCnYMOamNKLGVlJgRUbamveA)
+* [Chase Jarvis](https://www.youtube.com/channel/UCp8mr0kjVyVAmvexLDqB60A)
+* [Team Fearless](https://www.youtube.com/channel/UCf9_s9ii6BZ-klpgmtIi3WQ)
+* [Gary Vaynerchuk](https://www.youtube.com/user/GaryVaynerchuk)

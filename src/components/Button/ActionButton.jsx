@@ -6,6 +6,7 @@ import css from './index.scss'
 function ActionButton(props) {
   return (
     <button
+      disabled={props.disabled}
       onClick={props.onClick}
       className={classNames(css.actionButton, {
         [css['actionButton--inverted']]: props.invert,
@@ -18,9 +19,13 @@ function ActionButton(props) {
 ActionButton.propTypes = {
   // eslint-disable-next-line
   invert: PropTypes.bool,
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func,
   children: PropTypes.node.isRequired,
 }
 ActionButton.defaultProps = {
   invert: false,
+  disabled: false,
+  onClick: null,
 }
 export default ActionButton

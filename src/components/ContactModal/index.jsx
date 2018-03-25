@@ -13,18 +13,26 @@ function ContactModal(props) {
     <Modal {...props} className={css.contact} isOpen={props.isOpen}>
       <ModalHeader>Contact Me</ModalHeader>
       <ModalContent className={css.contact__content}>
+        Not working Currently, use my email below
         <div>
-          <label htmlFor="contact-name">Name:</label>
-          <input id="contact-name" type="text" />
+          {/* <label htmlFor="contact-name">Name:</label> */}
+          <input placeholder="Your name" id="contact-name" type="text" />
         </div>
-
         <div>
-          <label htmlFor="contact-message">Message:</label>
-          <textarea id="contact-message" type="text" />
+          {/* <label htmlFor="contact-message">Message:</label> */}
+          <textarea
+            placeholder="Your message"
+            id="contact-message"
+            type="text"
+          />
         </div>
       </ModalContent>
       <ModalFooter className={css.contact__footer}>
-        <ModalButton onClick={props.onSent} className={css.contact__button}>
+        <ModalButton
+          disabled
+          onClick={props.onSent}
+          className={css.contact__button}
+        >
           Send Message
         </ModalButton>
       </ModalFooter>

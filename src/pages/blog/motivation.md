@@ -3,7 +3,8 @@ title: Motivation
 date: "2018-01-20T11:46:00.169Z"
 published: true
 ---
-Für eine klare Mindset und einen starken Geist, finde ich es wichtig sich zu motivieren. Dadurch können auch die kleinsten aller Herausforderungen mit leichtigkeit bewältigt werden. Hier ist eine Liste von motivierenden Videos:
+
+This is a list of my favourite videos for motivation. I find motivation important, because it strengthens the mind and your mentalness.
 
 * [The Wisdom of a Third Grade Dropout Will Change Your Life | Rick Rigsby](https://youtu.be/Bg_Q7KYWG1g)
 * [How to Be a High Performance Entrepreneur](https://www.youtube.com/watch?v=OoEzY9JkrQg)
