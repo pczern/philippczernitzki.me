@@ -11,11 +11,11 @@ function Footer() {
       <BoxedContainer>
         <div className={css.footer__body}>
           <div className={css.footer__col}>
-            <h3 className={css.footer__headline}>Neuste Beiträge</h3>
+            <h3 className={css.footer__headline}>Incredible Articles</h3>
             <ul className={css.footer__linkList}>
               <li className={css.footer__item}>
-                <LinkInternal to="/blog/react-starte-jetzt">
-                  React, starte jetzt
+                <LinkInternal to="/blog/my-youtube-channel">
+                  My Youtube Channel
                 </LinkInternal>
               </li>
               <li className={css.footer__item}>
@@ -24,19 +24,19 @@ function Footer() {
                 </LinkInternal>
               </li>
               <li className={css.footer__item}>
-                <LinkInternal to="/blog/beste-youtuber">
-                  Die besten YouTube Channels für Entrepreneurs
+                <LinkInternal to="/blog/best-youtube">
+                  Best Youtube Channels for Entrepreneurs
                 </LinkInternal>
               </li>
               <li className={css.footer__item}>
-                <LinkInternal to="/blog/sport">
+                {/* <LinkInternal to="/blog/sport">
                   Sport, warum, wann und wie?
-                </LinkInternal>
+                </LinkInternal> */}
               </li>
             </ul>
           </div>
           <div className={css.footer__col}>
-            <h3 className={css.footer__headline}>Ressourcen</h3>
+            <h3 className={css.footer__headline}>Ressources</h3>
             <ul className={css.footer__linkList}>
               <li className={css.footer__item}>
                 <LinkInternal to="/blog/motivation">
@@ -45,21 +45,21 @@ function Footer() {
               </li>
               <li className={css.footer__item}>
                 <LinkInternal to="/blog/best-youtube">
-                  Beste Youtube Channels
+                  Best Youtube Channels for Entrepreneurs
                 </LinkInternal>
               </li>
               <li className={css.footer__item}>
-                <LinkInternal to="/books">Empfohlene Bücher</LinkInternal>
+                <LinkInternal to="/books">Recommended Books</LinkInternal>
               </li>
               <li className={css.footer__item}>
-                <LinkInternal to="/blog/sport">
+                {/* <LinkInternal to="/blog/sport">
                   Sport, warum, wann und wie?
-                </LinkInternal>
+                </LinkInternal> */}
               </li>
             </ul>
           </div>
           <div className={css.footer__col}>
-            <h3 className={css.footer__headline}>Finde Mich</h3>
+            <h3 className={css.footer__headline}>Find Me</h3>
             <ul className={css.footer__linkList}>
               <li className={css.footer__itemWithIcon}>
                 <LinkExternal to="mailto:philipp.czernitzki@gmail.com">

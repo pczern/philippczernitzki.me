@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import BannerImage from '../images/banner.png'
 import IconBox from '../components/IconBox'
 import { FullContainer, BoxedContainer } from '../components/Container'
-
+import { LinkExternal } from '../components/Link'
 import Map, { MapBox } from '../components/Map'
 import { GhostButton, ActionButton } from '../components/Button'
 import Banner from '../components/Banner'
@@ -39,9 +39,14 @@ class Index extends React.Component {
             <h2>React & Android Expert, 7 Years Experience, 2018</h2>
             <div>
               <GhostButton onClick={this.handleContacting}>
-                Schreib mir
+                Contact Me
               </GhostButton>
-              <ActionButton invert>React Webinar</ActionButton>
+              <LinkExternal
+                target="_blank"
+                to="https://www.youtube.com/channel/UCd-q4-zID8jTaAF8pbly3Sw"
+              >
+                <ActionButton invert>Youtube Channel</ActionButton>
+              </LinkExternal>
             </div>
           </BoxedContainer>
         </Banner>
@@ -49,7 +54,7 @@ class Index extends React.Component {
           <Row className={css.icons__row} cols={4}>
             <IconBox icon="code">7 Years Experience</IconBox>
             <IconBox icon={['fab', 'react']}>React.js Expert</IconBox>
-            <IconBox icon="briefcase">Unternehmer</IconBox>
+            <IconBox icon={['fab', 'css3']}>Web Dev</IconBox>
             <IconBox icon={['fab', 'android']}>Certified Android Dev</IconBox>
           </Row>
         </BoxedContainer>

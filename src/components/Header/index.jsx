@@ -12,7 +12,7 @@ class Header extends React.Component {
             <LinkInternal to="/">
               <h2 className={css.header__title}>Philipp Czernitzki</h2>
               <h3 className={css.header__subtitle}>
-                Web & App Engineer aus Deutschland
+                Web & App Engineer, Germany
               </h3>
             </LinkInternal>
             <ul className={css.header__navList}>
