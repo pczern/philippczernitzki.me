@@ -15,6 +15,7 @@ function ContactModal(props) {
   return (
     <Modal {...props} className={css.contact} isOpen={props.isOpen}>
       <form
+        action="/"
         name="contact"
         method="POST"
         data-netlify="true"
