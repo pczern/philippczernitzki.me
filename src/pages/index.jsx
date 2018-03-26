@@ -76,7 +76,7 @@ class Index extends React.Component {
         </BoxedContainer>
         <FullContainer className={css.aboutText} backgroundColor="#F9F9F9">
           <BoxedContainer className={css.aboutText__boxed}>
-            <h2 className={css.aboutText__headline}>Was Ich Mache</h2>
+            <h2 className={css.aboutText__headline}>What I Do</h2>
             <Row key={1} className={css.aboutText__row} cols={2}>
               <div className={css.aboutText__textBox}>
                 <h3>React</h3>
