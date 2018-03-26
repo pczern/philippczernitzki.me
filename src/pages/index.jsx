@@ -139,7 +139,7 @@ class Index extends React.Component {
           <MapBox>
             <Map />
             <div>
-              <h3>In der Umgebung</h3>
+              <h3>Location</h3>
               <p>
                 <Icon src="paper-plane" />
                 <span>philipp.czernitzki@gmail.com</span>
