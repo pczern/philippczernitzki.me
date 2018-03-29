@@ -34,6 +34,9 @@ class Index extends React.Component {
     return (
       <div>
         <Banner src={BannerImage}>
+          <Helmet>
+            <title>Philipp Czernitzki</title>
+          </Helmet>
           <BoxedContainer className={css.topBanner}>
             <h1>Software Engineer</h1>
             <h2>React & Android Expert, 7 Years Experience, 2018</h2>
@@ -166,3 +169,13 @@ class Index extends React.Component {
 }
 
 export default Index
+
+export const pageQuery = graphql`
+  query TheIndexQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`

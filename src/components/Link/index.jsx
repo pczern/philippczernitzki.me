@@ -12,13 +12,25 @@ LinkInternal.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export const LinkExternal = props => (
-  <a {...props} href={props.to}>
-    {props.children}
-  </a>
-)
+export const LinkExternal = props => {
+  let newRel = props.rel
+  if (props.target === '_blank') {
+    newRel += ' noopener noreferrer'
+  }
+  return (
+    <a {...props} target={props.target} rel={newRel} href={props.to}>
+      {props.children}
+    </a>
+  )
+}
 LinkExternal.propTypes = {
+  target: PropTypes.string,
+  rel: PropTypes.string,
   to: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
+}
+LinkExternal.defaultProps = {
+  target: '_blank',
+  rel: 'noopener noreferrer',
 }
 export default LinkInternal

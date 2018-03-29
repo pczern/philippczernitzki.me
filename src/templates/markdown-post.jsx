@@ -11,7 +11,7 @@ function MarkdownPostTemplate(props) {
   return (
     <div>
       <Helmet title={`${postFrontmatter.title} | ${siteTitle}`} />
-      <BlogContainer padding="0 0 4em">
+      <BlogContainer>
         <Post>
           <h1>{postFrontmatter.title}</h1>
           <time>{postFrontmatter.date}</time>

@@ -50,26 +50,18 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        // trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: 'UA-87721792-3',
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        respectDNT: true,
       },
     },
     `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `roboto\:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i`,
-          `raleway`,
-          `hind\:300,400,500,600,700`,
-          `muli\:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i`,
-          `limelight`,
-          `montserrat\:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i`,
-          `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
-        ],
-      },
-    },
   ],
 }

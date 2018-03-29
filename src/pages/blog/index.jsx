@@ -9,7 +9,6 @@ import { BlogContainer } from '../../components/Container'
 
 class BlogIndex extends React.Component {
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const allMarkdownRemarkEdges = get(
       this.props,
       'data.allMarkdownRemark.edges',
@@ -51,7 +50,9 @@ class BlogIndex extends React.Component {
 
     return (
       <BlogContainer padding="0 0 2em">
-        <Helmet title={siteTitle} />
+        <Helmet>
+          <title>Blog</title>
+        </Helmet>
 
         {posts.map(post => {
           if (post.isPublished)

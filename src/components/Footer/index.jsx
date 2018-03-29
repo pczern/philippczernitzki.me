@@ -39,8 +39,8 @@ function Footer() {
             <h3 className={css.footer__headline}>Ressources</h3>
             <ul className={css.footer__linkList}>
               <li className={css.footer__item}>
-                <LinkInternal to="/blog/motivation">
-                  Motivation Musik
+                <LinkInternal to="/data-privacy">
+                  Data Privacy / Data Protection
                 </LinkInternal>
               </li>
               <li className={css.footer__item}>
