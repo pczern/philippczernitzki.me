@@ -2,7 +2,7 @@ import React from 'react'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-import BannerImage from '../images/banner.png'
+import BannerImage from '../images/banner1.png'
 import IconBox from '../components/IconBox'
 import { FullContainer, BoxedContainer } from '../components/Container'
 import { LinkExternal } from '../components/Link'

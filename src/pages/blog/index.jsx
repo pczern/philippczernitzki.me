@@ -46,7 +46,7 @@ class BlogIndex extends React.Component {
     posts.sort((a, b) => {
       const c = new Date(a.date)
       const d = new Date(b.date)
-      return c - d
+      return d - c
     })
 
     return (
