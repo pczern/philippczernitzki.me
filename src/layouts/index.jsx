@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-
+import 'prism-themes/themes/prism-ghcolors.css'
 import 'typeface-hind/index.css'
 import 'typeface-muli/index.css'
 import 'typeface-raleway/index.css'

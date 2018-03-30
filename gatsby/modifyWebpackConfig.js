@@ -10,12 +10,12 @@ const { extractTextPlugin } = require(`gatsby-1-config-extract-plugin`)
 // const ExtractTextInstance = new ExtractTextPlugin('styles.css')
 
 module.exports = ({ config, stage }, { precision }) => {
-  const sassFiles = /\.(s[ac]ss|css)$/
+  const sassFiles = /\.(s[ac]ss)$/
   const jsFiles = /\.jsx?$/
   const sassLoader = precision ? `sass?precision=${precision}` : `sass`
 
   config
-    .removeLoader(`css`)
+
     .removeLoader(`cssModules`)
     .removeLoader(`sass`)
     .removeLoader(`sassModules`)

@@ -114,4 +114,69 @@
   *:after {
     box-sizing: inherit;
   }
+
+  // css for <code> element, override prism styles
+
+  /**
+   * Add back the container background-color, border-radius, padding, margin
+   * and overflow that we removed from <pre>.
+   */
+  .gatsby-highlight {
+    border-radius: 0.3em;
+    overflow: auto;
+    margin-bottom: 1.5em;
+  }
+
+  /**
+   * Remove the default PrismJS theme background-color, border-radius, margin,
+   * padding and overflow.
+   * 1. Make the element just wide enough to fit its content.
+   * 2. Always fill the visible space in .gatsby-highlight.
+   */
+  .gatsby-highlight pre[class*='language-'] {
+    overflow: initial;
+    float: left; /* 1 */
+    min-width: 100%; /* 2 */
+  }
+
+  .gatsby-highlight-code-line {
+    background-color: #feb;
+    display: block;
+    margin-right: -1em;
+    margin-left: -1em;
+    padding-right: 1em;
+    padding-left: 0.75em;
+    border-left: 0.25em solid #f99;
+    font-size: 0.85em;
+  }
+
+  code[class*='language-'],
+  pre[class*='language-'] {
+    font-family: monospace;
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+
+  pre[class*='language-'] {
+    border: 1px solid #f7f7f7;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+  }
+
+  :not(pre) > code[class*='language-'] {
+    border: 1px solid #f7f7f7;
+    background-color: #f7f7f7;
+  }
+
+  .token.function,
+  .token.deleted,
+  .language-autohotkey .token.tag {
+    color: #05539a;
+  }
+
+  .token.important,
+  .token.function,
+  .token.bold {
+    font-weight: 500;
+  }
 }

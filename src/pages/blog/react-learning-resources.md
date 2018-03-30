@@ -7,7 +7,3 @@ published: true
 This is a list of my favourite articles/video & resources around React and it's ecosystem.
 
 * [React.js ](https://reactjs.org/)
-
-```javascript
-console.log('yeah')
-```

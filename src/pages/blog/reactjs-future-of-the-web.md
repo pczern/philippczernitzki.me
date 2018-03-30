@@ -10,7 +10,3 @@ One of the current trending changes are big JS libraries like React.js, Angular 
 I am not 100% familiar with Vue.js and Angular but I am certain that React.js is going to grow and won't back down by those alternatives.
 React.js has become the best JavaScript library for building large scale user interfaces.
 React can be integrated into every web application right away.
-
-```
-echo 'cool';
-```
