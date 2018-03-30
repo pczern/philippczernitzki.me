@@ -115,6 +115,11 @@
     box-sizing: inherit;
   }
 
+  svg,
+  i {
+    height: 1em;
+  }
+
   // css for <code> element, override prism styles
 
   /**
