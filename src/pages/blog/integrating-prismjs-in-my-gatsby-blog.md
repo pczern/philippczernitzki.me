@@ -1,6 +1,6 @@
 ---
 title: Integrating PrismJS for Code Formatting in GatsbyJS
-date: "2018-30-30T02:14:00.000Z"
+date: "2018-03-30T02:42:00.000Z"
 published: true
 ---
 
