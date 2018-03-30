@@ -1,0 +1,33 @@
+@import '../../css/dimens.scss';
+
+.cv {
+  display: flex;
+}
+
+.cv__personal {
+  width: 100%;
+
+  img {
+    max-width: 330px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+
+  div {
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+@media (min-width: dimens(tablet)) {
+  .cv__personal {
+    img {
+      border-radius: 10%;
+      float: left;
+    }
+  }
+}

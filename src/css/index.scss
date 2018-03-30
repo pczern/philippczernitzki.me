@@ -36,6 +36,10 @@
   .__page__content {
     flex: 1;
     line-height: 1.6;
+    color: color(primary, text);
+    font-weight: 300;
+    line-height: 1.7;
+    font-size: 1.07em;
   }
 
   body {

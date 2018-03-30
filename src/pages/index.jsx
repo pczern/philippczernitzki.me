@@ -36,6 +36,10 @@ class Index extends React.Component {
         <Banner src={BannerImage}>
           <Helmet>
             <title>Philipp Czernitzki</title>
+            <meta
+              name="description"
+              content="Hi I am Philipp Czernitzki, a Web & App Developer from Germany. Currently I am working largely with React.js. Checkout my website for more infos about me."
+            />
           </Helmet>
           <BoxedContainer className={css.topBanner}>
             <h1>Software Engineer</h1>
