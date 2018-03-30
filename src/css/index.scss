@@ -145,7 +145,7 @@
   }
 
   .gatsby-highlight-code-line {
-    background-color: #feb;
+    background-color: #f00;
     display: block;
     margin-right: -1em;
     margin-left: -1em;
@@ -160,6 +160,7 @@
     font-family: monospace;
     font-size: 0.9em;
     line-height: 1.5;
+    white-space: pre-wrap;
   }
 
   pre[class*='language-'] {
