@@ -119,7 +119,7 @@ class Index extends React.Component {
             </Row>
           </BoxedContainer>
         </FullContainer>
-        <BoxedContainer key={3} padding="4em" className={css.projects}>
+        <BoxedContainer key={3} padding="4em 0em" className={css.projects}>
           <h2 className={css.headline}>Some Projects</h2>
           <Row className={css.projects__row} cols={3}>
             {projects.map(project => {

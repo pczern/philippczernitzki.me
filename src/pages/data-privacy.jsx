@@ -11,6 +11,7 @@ function DataPrivacy() {
     <BlogContainer>
       <Helmet>
         <title>Data Privacy</title>
+        <meta name="robots" content="noindex,nofollow" />
       </Helmet>
       <Post>
         <h1>Data Privacy Policy / Impressum</h1>

@@ -120,6 +120,10 @@
   }
 }
 
+.project {
+  box-shadow: 0 0 3px #ddd;
+}
+
 @media (max-width: dimens(phone)) {
   .topBanner {
     button {
@@ -155,6 +159,15 @@
       margin-bottom: 2em;
     }
   }
+
+  .projects__row {
+    width: 100%;
+
+    & > div {
+      width: 100%;
+      padding: 0% 10%;
+    }
+  }
 }
 
 @media (max-width: dimens(tablet)) {
@@ -165,12 +178,12 @@
     box-shadow: 0 0 3px #ddd;
   }
 
-  .project__row {
+  .projects__row {
     width: 100%;
 
     & > div {
       width: 100%;
-      padding: 0%;
+      padding: 0% 1em;
     }
   }
 }
