@@ -68,7 +68,7 @@ function Footer() {
               </li>
               <li className={css.footer__itemWithIcon}>
                 <LinkExternal
-                  to="https://github.com/speeddeveloper"
+                  to="https://github.com/philippczernitzki"
                   target="_blank"
                 >
                   <BrandIcon className={css.footer__icon} src="github" />Github
@@ -86,7 +86,10 @@ function Footer() {
               </li>
               {/* <LinkItem to="https://stackoverflow.com/users/3885001/speeddeveloper" target="_blank"><cssdIcon src="wordpress" />WordPress</LinkItem> */}
               <li className={css.footer__itemWithIcon}>
-                <LinkExternal to="http://bcert.me/szssafdr" target="_blank">
+                <LinkExternal
+                  to="https://www.credential.net/jkun69ws"
+                  target="_blank"
+                >
                   <BrandIcon className={css.footer__icon} src="android" />Android
                   Certified Dev
                 </LinkExternal>
