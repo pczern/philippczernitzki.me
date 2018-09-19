@@ -1,4 +1,4 @@
-# Great website built with GatsbyJS
+# [Great website](https://angry-shaw-cd336c.netlify.com/) built with GatsbyJS & Netlify
 My website built with [GatsbyJS](https://www.gatsbyjs.org/)  
 Take a look at the [website](https://angry-shaw-cd336c.netlify.com/)  
 Domain moved to new version without GatsbyJS. Find the repo [here](https://github.com/pczern/pc)  
